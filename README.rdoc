@@ -5,8 +5,20 @@
 4. Page structure
 
 Page model
-
+friendly-id
 
 
 5. Home controller
 6. Error controller
+
+Page
+
+url
+path
+title
+content
+
+is_published (published_at)
+
+robots.txt
+Карта сайта
