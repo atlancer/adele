@@ -13,11 +13,12 @@ gem 'friendly_id'
 gem 'awesome_nested_set'
 
 # gem 'unicorn'
-# gem 'capistrano-rails', group: :development
+
+gem "twitter-bootstrap-rails"
 
 group :development do
   gem 'quiet_assets'
-  gem 'capistrano'
+  gem 'capistrano-rails'
 end
 
 group :development, :test do
