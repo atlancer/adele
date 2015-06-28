@@ -13,12 +13,14 @@ friendly-id
 
 Page
 
-url
+---------------
+slug
 path
 title
+keywords
+description
 content
-
-is_published (published_at)
-
+published_at
+---------------
 robots.txt
 Карта сайта

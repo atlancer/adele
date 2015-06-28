@@ -9,6 +9,8 @@ gem 'therubyracer', platforms: :ruby
 
 gem 'jquery-rails'
 gem 'slim-rails'
+gem 'friendly_id'
+gem 'awesome_nested_set'
 
 # gem 'unicorn'
 # gem 'capistrano-rails', group: :development
