@@ -17,6 +17,7 @@ gem 'awesome_nested_set'
 
 group :development do
   gem 'quiet_assets'
+  gem 'capistrano'
 end
 
 group :development, :test do

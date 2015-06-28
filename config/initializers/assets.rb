@@ -9,3 +9,10 @@ Rails.application.config.assets.version = '1.0'
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
+
+# http://stackoverflow.com/questions/19103759/rails-4-custom-error-pages-for-404-500-and-where-is-the-default-500-error-mess
+Rails.application.config.assets.precompile += %w(404.html 500.html)
+Rails.application.config.assets.paths << Rails.root.join('app/assets/html')
+Rails.application.config.assets.register_mime_type('text/html', '.html')
+# for Slim
+# Rails.application.assets.register_engine('.slim', Slim::Template)
