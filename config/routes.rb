@@ -53,6 +53,5 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 
-  # get '/*', to: 'page#show'
   get '/:id', :to => 'pages#show'
 end

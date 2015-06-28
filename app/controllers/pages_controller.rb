@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
   def show
-    # Page.find params[:id]
+    @page = Page.find(params[:id])
   end
 end
