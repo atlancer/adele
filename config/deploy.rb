@@ -86,31 +86,16 @@ namespace :deploy do
   desc 'Copy compiled error pages to public'
   task :copy_error_pages do
     on roles(:app) do
-      # puts Rails.application.assets.find_asset('404.html').digest_path
-
-      pages = "#{current_path}/public/#{fetch(:assets_prefix)}/*"
-      pages = "#{current_path}/app/assets/error_pages/*"
-
-      puts current_path
-      puts pages
-      puts Dir[pages]
+      assets = "#{current_path}/public/#{fetch(:assets_prefix)}"
+      pages  = "#{current_path}/app/assets/error_pages/*"
 
       Dir[pages].each do |page|
-        puts page
+        basename = File.basename(page).split('.').first # unknown extension for asset
+        asset_file = "#{assets}/#{basename}-*.html"
+        file = Dir[asset_file].first
+
+        execute :cp, "#{file} #{current_path}/public/#{basename}.html"
       end
-
-      # "#{current_path}/public/#{fetch(:assets_prefix)}/#{page}*.html"
-
-      # %w(404 500).each do |page|
-      #   page_glob = "#{current_path}/public/#{fetch(:assets_prefix)}/#{page}*.html"
-      #   # copy newest asset
-      #   asset_file = capture :ruby, %Q{-e "print Dir.glob('#{page_glob}').max_by { |file| File.mtime(file) }"}
-      #   if asset_file
-      #     execute :cp, "#{asset_file} #{current_path}/public/#{page}.html"
-      #   else
-      #     error "Error #{page} asset does not exist"
-      #   end
-      # end
     end
   end
   after :finishing, :copy_error_pages
