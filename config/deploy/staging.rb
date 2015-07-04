@@ -1,6 +1,6 @@
 server 'localhost', user: 'deploy', roles: %w{app db web}
 
-set :deploy_to, '/home/deploy/projects/adele'
+set :deploy_to, '/home/deploy/apps/adele'
 set :branch,    'master'
 set :rails_env, 'staging'
 

@@ -98,7 +98,7 @@ namespace :deploy do
       end
     end
   end
-  after :finishing, :copy_error_pages
+  # after :finishing, :copy_error_pages
 end
 
 # todo add to nginx
