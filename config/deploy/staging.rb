@@ -1,3 +1,9 @@
+server 'localhost', user: 'deploy', roles: %w{app db web}
+
+set :deploy_to, '/home/deploy/projects/adele'
+set :branch,    'master'
+set :rails_env, 'staging'
+
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.

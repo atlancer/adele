@@ -19,7 +19,13 @@ gem "twitter-bootstrap-rails"
 
 group :development do
   gem 'quiet_assets'
+
+  # Capistrano
+  gem 'capistrano'
+  gem 'rvm1-capistrano3', require: false
   gem 'capistrano-rails'
+  gem 'capistrano-passenger'
+  gem 'capistrano-shell'
 end
 
 group :development, :test do

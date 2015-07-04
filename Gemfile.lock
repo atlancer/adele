@@ -53,9 +53,13 @@ GEM
     capistrano-bundler (1.1.4)
       capistrano (~> 3.1)
       sshkit (~> 1.2)
+    capistrano-passenger (0.1.1)
+      capistrano (~> 3.0)
     capistrano-rails (1.1.3)
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
+    capistrano-shell (0.2.0)
+      capistrano (~> 3.1)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -129,6 +133,9 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rake (10.4.2)
     ref (1.0.5)
+    rvm1-capistrano3 (1.3.2.2)
+      capistrano (~> 3.0)
+      sshkit (>= 1.2)
     sass (3.4.12)
     sass-rails (5.0.1)
       railties (>= 4.0.0, < 5.0)
@@ -189,7 +196,10 @@ PLATFORMS
 DEPENDENCIES
   awesome_nested_set
   byebug
+  capistrano
+  capistrano-passenger
   capistrano-rails
+  capistrano-shell
   coffee-rails (~> 4.1.0)
   friendly_id
   jquery-rails
@@ -197,6 +207,7 @@ DEPENDENCIES
   passenger
   quiet_assets
   rails (= 4.2.0)
+  rvm1-capistrano3
   sass-rails (~> 5.0)
   slim-rails
   spring
