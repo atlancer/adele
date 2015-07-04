@@ -13,6 +13,7 @@ gem 'friendly_id'
 gem 'awesome_nested_set'
 
 # gem 'unicorn'
+gem 'passenger'
 
 gem "twitter-bootstrap-rails"
 
