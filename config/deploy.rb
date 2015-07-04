@@ -85,6 +85,40 @@ end
 namespace :deploy do
   desc 'Copy compiled error pages to public'
   task :copy_error_pages do
+    on roles(:app) do
+      # puts Rails.application.assets.find_asset('404.html').digest_path
+
+      pages = "#{current_path}/public/#{fetch(:assets_prefix)}/*"
+      pages = "#{current_path}/app/assets/error_pages/*"
+
+      puts current_path
+      puts pages
+      puts Dir[pages]
+
+      Dir[pages].each do |page|
+        puts page
+      end
+
+      # "#{current_path}/public/#{fetch(:assets_prefix)}/#{page}*.html"
+
+      # %w(404 500).each do |page|
+      #   page_glob = "#{current_path}/public/#{fetch(:assets_prefix)}/#{page}*.html"
+      #   # copy newest asset
+      #   asset_file = capture :ruby, %Q{-e "print Dir.glob('#{page_glob}').max_by { |file| File.mtime(file) }"}
+      #   if asset_file
+      #     execute :cp, "#{asset_file} #{current_path}/public/#{page}.html"
+      #   else
+      #     error "Error #{page} asset does not exist"
+      #   end
+      # end
+    end
+  end
+  after :finishing, :copy_error_pages
+end
+
+namespace :deploy do
+  desc 'Copy compiled error pages to public'
+  task :copy_error_pages_OLD do
     on roles(:all) do
       %w(404 500).each do |page|
         page_glob = "#{current_path}/public/#{fetch(:assets_prefix)}/#{page}*.html"
@@ -100,6 +134,7 @@ namespace :deploy do
   end
   # after :finishing, :copy_error_pages
 end
+
 
 # todo add to nginx
 # error_page 500 502 503 504 /500.html;
