@@ -81,11 +81,29 @@ end
 # end
 
 
+desc 'Invoke a rake command on the remote server'
+task :invoke do
+  on primary(:app) do
+    within current_path do
+      with :rails_env => fetch(:rails_env) do
+        rake 'test:me'
+      end
+    end
+  end
+end
+
+
+
 # http://stackoverflow.com/questions/19103759/rails-4-custom-error-pages-for-404-500-and-where-is-the-default-500-error-mess
 namespace :deploy do
   desc 'Copy compiled error pages to public'
   task :copy_error_pages do
     on roles(:app) do
+      Rails.root
+      Rails.application.assets.find_asset('401.html')
+
+
+
       assets = "#{current_path}/public/#{fetch(:assets_prefix)}"
       pages  = "#{current_path}/app/assets/error_pages/*"
 
@@ -98,7 +116,7 @@ namespace :deploy do
       end
     end
   end
-  after :finishing, :copy_error_pages
+  # after :finishing, :copy_error_pages
 end
 
 namespace :deploy do
