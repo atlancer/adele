@@ -80,16 +80,19 @@ end
 #   end
 # end
 
-
-desc 'Invoke a rake command on the remote server'
-task :invoke do
-  on primary(:app) do
-    within current_path do
-      with :rails_env => fetch(:rails_env) do
-        rake 'test:me'
+namespace :deploy do
+  desc 'Invoke a rake command on the remote server'
+  task :test_me do
+    on primary(:app) do
+      within current_path do
+        with :rails_env => fetch(:rails_env) do
+          asd = rake 'error_pages:list'
+          puts "CAP > #{asd}"
+        end
       end
     end
   end
+  after :finishing, :test_me
 end
 
 
