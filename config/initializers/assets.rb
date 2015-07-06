@@ -16,3 +16,5 @@ Rails.application.config.assets.paths << Rails.root.join('app/assets/error_pages
 Rails.application.config.assets.register_mime_type('text/html', '.html')
 # for Slim
 Rails.application.assets.register_engine('.slim', Slim::Template)
+# for Haml
+# Rails.application.assets.register_engine('.haml', Tilt::HamlTemplate)
