@@ -15,7 +15,9 @@ gem 'awesome_nested_set'
 # gem 'unicorn'
 gem 'passenger'
 
-gem "twitter-bootstrap-rails"
+gem 'twitter-bootstrap-rails'
+gem 'high_voltage', '~> 2.3.0'
+# gem 'sitemap_generator'
 
 group :development do
   gem 'quiet_assets'

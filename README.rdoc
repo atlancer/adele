@@ -1,6 +1,6 @@
 1) error pages
 + error page with link to the home page
-2) test error pages in production
+
 
 3) select & add twitter based design
 4) base layout

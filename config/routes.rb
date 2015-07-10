@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  root 'home#index'
+  # root 'home#index'
+
+  root to: 'pages#show', id: 'contacts'
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
@@ -53,5 +55,5 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 
-  get '/:id', :to => 'pages#show'
+  get '/:id', :to => 'pages#show', format: false
 end
