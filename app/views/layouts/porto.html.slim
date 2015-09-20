@@ -2,21 +2,46 @@ doctype html
 html lang="en"
   head
     meta charset="utf-8"
+    title= page_title yield(:title)
+    meta name="keywords" content="#{yield(:keywords)}"
+    meta name="description" content="#{yield(:description)}"
     meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"
     meta name="viewport" content="width=device-width, initial-scale=1.0"
-    title= page_title yield(:title)
-    meta name="description" content="#{yield(:description)}"
-    meta name="keywords" content="#{yield(:keywords)}"
     = csrf_meta_tags
+
+    /
+    /ok <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light">
+    /
+    /<link href="vendor/bootstrap/bootstrap.css" rel="stylesheet">
+    /<link href="vendor/fontawesome/css/font-awesome.css" rel="stylesheet">
+    /
+    /<link media="screen" href="vendor/owlcarousel/owl.carousel.min.css" rel="stylesheet">
+    /<link media="screen" href="vendor/owlcarousel/owl.theme.default.min.css" rel="stylesheet">
+    /<link media="screen" href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+    /
+    /<link href="css/theme.css" rel="stylesheet">
+    /<link href="css/theme-elements.css" rel="stylesheet">
+    /<link href="css/theme-blog.css" rel="stylesheet">
+    /<link href="css/theme-shop.css" rel="stylesheet">
+    /<link href="css/theme-animate.css" rel="stylesheet">
+    /
+    /<link media="screen" href="vendor/rs-plugin/css/settings.css" rel="stylesheet">
+    /<link media="screen" href="vendor/circle-flip-slideshow/css/component.css" rel="stylesheet">
+    /
+    /<link href="css/skins/default.css" rel="stylesheet">
+    /<link href="css/custom.css" rel="stylesheet">
+    /
+
 
     /! Le HTML5 shim, for IE6-8 support of HTML elements
     /[if lt IE 9]
       = javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"
+    = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light"
     = stylesheet_link_tag "application", :media => "all"
-    = favicon_link_tag 'apple-touch-icon-144x144-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '144x144'
-    = favicon_link_tag 'apple-touch-icon-114x114-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '114x114'
-    = favicon_link_tag 'apple-touch-icon-72x72-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '72x72'
-    = favicon_link_tag 'apple-touch-icon-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png'
+    /= favicon_link_tag 'apple-touch-icon-144x144-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '144x144'
+    /= favicon_link_tag 'apple-touch-icon-114x114-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '114x114'
+    /= favicon_link_tag 'apple-touch-icon-72x72-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '72x72'
+    /= favicon_link_tag 'apple-touch-icon-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png'
     = favicon_link_tag 'favicon.ico', :rel => 'shortcut icon'
     = javascript_include_tag "application"
 
@@ -34,11 +59,202 @@ html lang="en"
     /        li= link_to "Link 2", "/path2"
     /        li= link_to "Link 3", "/path3"
 
-    .container
-      .row
-        .col-lg-12
-          = bootstrap_flash
-          = yield
+    /.container
+    /  .row
+    /    .col-lg-12
+    /      = bootstrap_flash
+    /      = yield
+    /
+    /  footer
+    /    p &copy; Company 2015
 
-      footer
-        p &copy; Company 2015
+
+    .body.coming-soon
+      header#header.clean-top data-plugin-options='{"stickyEnabled": false}'
+        .header-top
+          .container
+            p
+              /|Телефон в Санкт-Петербурге:
+              |&nbsp;&nbsp;
+              |&nbsp;&nbsp;
+              span
+                i.fa.fa-phone
+                |+7 (812) 992-51-70
+              |&nbsp;&nbsp;
+              |&nbsp;&nbsp;
+              span
+                i.fa.fa-phone
+                |+7 (921) 992-51-70
+              |&nbsp;&nbsp;
+              |&nbsp;&nbsp;
+              span
+                i.fa.fa-phone
+                |+7 (981) 758-86-76
+              |&nbsp;&nbsp;
+              |&nbsp;&nbsp;
+              span
+                i.fa.fa-envelope
+                a href='mailto:adelerun@yandex.ru' adelerun@yandex.ru
+              |&nbsp;&nbsp;
+              |&nbsp;&nbsp;
+              span
+                i.fa.fa-vk
+                a href='http://vk.com/adele_run' target='_blank' vk.com/adele_run
+              |&nbsp;&nbsp;
+              |&nbsp;&nbsp;
+
+
+            /ul.social-icons
+              li.facebook
+                a title='Facebook' target='_blank' href='http://www.facebook.com'
+                  |Facebook
+              li.twitter
+                a title='Twitter' target='_blank' href='http://www.twitter.com'
+                  |Twitter
+              li.linkedin
+                a title='Linkedin' target='_blank' href='http://www.linkedin.com'
+                  |Linkedin
+      .main role='main'
+        .container
+          .row
+            .col-md-12.center
+              p
+                = link_to('/') do
+                  = image_tag('adelerun.png', alt: 'Adele Run', widht: 518, height: 90)
+              h1.short
+                | Студия профессиональной флористики и дизайна
+              /p
+                = image_tag('DSC_0727.jpg', alt: 'Adele Run', height: 400)
+          .row
+            .col-md-12
+              hr
+          .row
+            .col-md-12.center
+              = image_tag('stab_01.jpg', alt: 'Adele Run flowers', widht: 600, height: 400)
+          .row
+            .col-md-12
+              hr
+
+          /.row
+            ul.portfolio-list.sort-destination.lightbox data-plugin-options='{"delegate": "a", "type": "image", "gallery": {"enabled": true}}"' data-sort-id="portfolio" style="position: relative; height: 595px;"
+              li.col-md-3.col-sm-6.col-xs-12.isotope-item.websites style="position: absolute; left: 0px; top: 0px;"
+                .portfolio-item.img-thumbnail
+                  a.thumb-info href="img/projects/project.jpg"
+                    = image_tag('project.jpg', alt: 'project alt', class: 'img-responsive')
+
+              li.col-md-3.col-sm-6.col-xs-12.isotope-item.websites style="position: absolute; left: 292px; top: 0px;"
+                .portfolio-item.img-thumbnail
+                  a.thumb-info href="img/projects/project.jpg"
+                    = image_tag('project.jpg', alt: 'project alt', class: 'img-responsive')
+
+              li.col-md-3.col-sm-6.col-xs-12.isotope-item.websites style="position: absolute; left: 585px; top: 0px;"
+                .portfolio-item.img-thumbnail
+                  a.thumb-info href="img/projects/project.jpg"
+                    = image_tag('project.jpg', alt: 'project alt', class: 'img-responsive')
+
+              li.col-md-3.col-sm-6.col-xs-12.isotope-item.websites style="position: absolute; left: 877px; top: 0px;"
+                .portfolio-item.img-thumbnail
+                  a.thumb-info href="img/projects/project.jpg"
+                    = image_tag('project.jpg', alt: 'project alt', class: 'img-responsive')
+
+
+
+
+          / 4e000b - color for background
+          /.row
+            .col-md-12.center
+              h1.short
+                |Наши работы
+              p.short.lead
+                |Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+              p
+                |Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+          /.row
+            .col-md-12
+              hr
+          .row
+            .col-md-12.center
+              h2.short Сайт в процессе разработки
+          .row
+            .col-md-12
+              hr
+
+          .row
+            .col-md-12.center
+              h2.short Наша страница Вконтакте
+              p.lead
+                i.fa.fa-vk
+                |&nbsp;
+                a href='http://vk.com/adele_run' target='_blank' vk.com/adele_run
+          .row
+            .col-md-12
+              hr
+
+          .row
+            .col-md-12.center
+              h2.short Адрес студии
+              p.lead
+                | г. Санкт-Петербург
+                br
+                | Старо-Петергофский проспект, д.30/1
+                br
+                | Станция метро «Нарвская»
+                br
+                | Бизнес-Центр «Нарвские Ворота»
+              p
+                = link_to('https://maps.yandex.ru/2/saint-petersburg/?ll=30.275973%2C59.903049&z=16&l=map&text=%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F%2C%20%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%2C%20%D0%A1%D1%82%D0%B0%D1%80%D0%BE-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B3%D0%BE%D1%84%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%2C%2030%D0%BA1%D0%90&sll=30.313497%2C59.938531&sspn=1.104126%2C0.232566&rtext=59.901166%2C30.274923~59.905073%2C30.277789&rtt=mt&ol=geo&oll=30.277789%2C59.905073',
+                          target: '_blank', title: 'Посмотреть на карте') do
+                  = image_tag('static-maps.yandex.ru.png', alt: 'Студия Adele Run на карте', height: 390, width: 519)
+                  / https://static-maps.yandex.ru/1.x/?l=map&z=15&size=600,450&pt=30.277789,59.905073,pm2dbm
+                  / https://static-maps.yandex.ru/1.x/?l=map&z=15&size=600,450&pt=30.277789,59.905073,pm2bm~30.274975,59.901207,pm2am
+          /.row
+            .col-md-12.center
+              h1.short.small
+                |САЙТ В РАЗРАБОТКЕ
+              p.short.lead
+                |Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+              p
+                |Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+          /.row
+            .col-md-12
+              hr.tall
+      footer#footer.short
+        .container
+          .row
+            .col-md-9
+              h4 Adele Run
+              /p
+                |Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu pulvinar magna. Phasellus semper scelerisque purus, et semper nisl lacinia sit amet. Praesent venenatis turpis vitae purus semper, eget sagittis velit venenatis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos...
+            .col-md-3
+              h5 Контакты:
+              span.phone
+                |+7 (812) 992-51-70
+              span.phone
+                |+7 (921) 992-51-70
+              span.phone
+                |+7 (981) 758-86-76
+              span.phone
+                i.fa.fa-envelope
+                  |&nbsp;
+                  a href='mailto:adelerun@yandex.ru' adelerun@yandex.ru
+              span.phone
+                i.fa.fa-vk
+                  |&nbsp;
+                  a href='http://vk.com/adele_run' target='_blank' vk.com/adele_run
+              /span.phone
+                a href='#' vkontakte
+              /span.phone
+                a href='#' instagram
+              /span.phone
+                a href='#' pinterest
+        .footer-copyright
+          .container
+            .row
+              /.col-md-1
+              /  = link_to('/', class: 'logo') do
+              /    = image_tag('porto/logo-footer.png', alt: 'Adele Run', class: 'img-responsive')
+              .col-md-12
+                p &copy; 2015. «Adele Run» - Студия профессиональной флористики и дизайна.
+
+    a.scroll-to-top.hidden-mobile.visible href="#"
+      i.fa.fa-chevron-up
