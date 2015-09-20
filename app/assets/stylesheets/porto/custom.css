@@ -1,0 +1,17 @@
+/* Add here all your CSS customizations */
+#header .header-top p {
+    float: left;
+    font-size: 1.4em;
+    line-height: 50px;
+    margin: 0;
+}
+
+ #footer {
+ 	background: #4e000b;
+ 	border-top: 4px solid #4e000b;
+ 	font-size: 0.9em;
+ 	margin-top: 50px;
+ 	padding: 70px 0 0;
+ 	position: relative;
+ 	clear: both;
+ }
