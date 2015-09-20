@@ -10,7 +10,16 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require 'bootstrap_and_overrides'
- *= require 'porto'
- *= require_self
+ *= require 'owlcarousel/owl.carousel.css'
+ *= require 'owlcarousel/owl.theme.default.css'
+ * require 'magnific-popup'
+ *= require 'porto/theme.css'
+ *= require 'porto/theme-elements.css'
+ *= require 'porto/theme-blog.css'
+ *= require 'porto/theme-shop.css'
+ *= require 'porto/theme-animate.css'
+ * require 'rs-plugin'
+ * require 'circle-flip-slideshow'
+ *= require 'porto/skins/default.css'
+ *= require 'porto/custom.css'
  */
