@@ -1,0 +1,34 @@
+TODO:
+- add passenger json config
+
+
+
+1) error pages
++ error page with link to the home page
+
+1. Breadcrumbs builder
+2. Menu builder
+
+3. Page
+4. Page structure
+
+Page model
+friendly-id
+
+
+5. Home controller
+6. Error controller
+
+Page
+
+---------------
+slug
+path
+title
+keywords
+description
+content
+published_at
+---------------
+robots.txt
+Карта сайта
