@@ -78,6 +78,7 @@ end
 # end
 
 namespace :deploy do
+  after :finishing, :copy_error_pages
   desc 'Invoke a rake command on the remote server'
   task :copy_error_pages do
     on primary(:app) do
@@ -94,9 +95,31 @@ namespace :deploy do
       end
     end
   end
-  after :finishing, :copy_error_pages
+
+  before :restart, :generate_passenger_config
+  desc 'generate passenger config'
+  task :generate_passenger_config do
+    on roles(:app) do
+      port = fetch(:port)
+
+      config = {
+        port:                  port,
+        environment:           fetch(:rails_env),
+        daemonize:             true,
+        log_file:              "#{shared_path}/log/passenger.log",
+        pid_file:              "#{shared_path}/tmp/pids/passenger.#{port}.pid"
+      }
+
+      upload! StringIO.new(JSON.pretty_generate(config) << "\n"),  "#{current_path}/Passengerfile.json"
+    end
+  end
+
+
 end
 
 # todo add to nginx
 # error_page 500 502 503 504 /500.html;
 # error_page 404 /404.html;
+
+
+
