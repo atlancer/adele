@@ -1,13 +1,10 @@
+TODO:
+- add passenger json config
+
+
+
 1) error pages
 + error page with link to the home page
-
-
-3) select & add twitter based design
-4) base layout
-5) home page: Карта + Адрес + Телефон !!!
-
-
-
 
 1. Breadcrumbs builder
 2. Menu builder
