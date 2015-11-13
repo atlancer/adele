@@ -97,17 +97,19 @@ namespace :deploy do
   desc 'generate passenger start|stop scripts'
   task :generate_passenger_scripts do
     on roles(:app) do
+      rvmsudo = fetch(:port) < 1024 ? 'rvmsudo' : '' # need root
+
       passenger_start = <<-EOF
 #!/bin/bash
 DIR="#{fetch(:deploy_to)}"
 export BUNDLE_GEMFILE="$DIR/current/Gemfile"
-cd $DIR && bundle exec passenger start current
+cd $DIR && #{rvmsudo} bundle exec passenger start current
       EOF
 
       passenger_stop = <<-EOF
 #!/bin/bash
 DIR="#{current_path}"
-cd $DIR && bundle exec passenger stop
+cd $DIR && #{rvmsudo} bundle exec passenger stop --pid-file "#{shared_path}/tmp/pids/passenger.#{fetch(:port)}.pid"
       EOF
 
       upload! StringIO.new(passenger_start), "#{fetch(:deploy_to)}/passenger_start.sh"
@@ -127,6 +129,8 @@ cd $DIR && bundle exec passenger stop
         log_file:    "#{shared_path}/log/passenger.log",
         pid_file:    "#{shared_path}/tmp/pids/passenger.#{port}.pid"
       }
+
+      config[:user] = fetch(:user) if port < 1024 # need root
 
       upload! StringIO.new(JSON.pretty_generate(config) << "\n"),  "#{current_path}/Passengerfile.json"
     end
