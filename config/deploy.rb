@@ -55,17 +55,6 @@ namespace :rvm1 do
   end
 end
 
-after 'deploy:publishing', 'deploy:restart'
-
-namespace :deploy do
-  desc "Restart application"
-  task :restart do
-    on roles(:app), in: :sequence, wait: 5 do
-      execute :touch, release_path.join("tmp/restart.txt")
-    end
-  end
-end
-
 # namespace :deploy do
 #   after :restart, :clear_cache do
 #     on roles(:web), in: :groups, limit: 3, wait: 10 do
@@ -78,7 +67,14 @@ end
 # end
 
 namespace :deploy do
-  after :finishing, :copy_error_pages
+  desc "Restart application"
+  task :restart do
+    on roles(:app), in: :sequence, wait: 5 do
+      execute :touch, release_path.join("tmp/restart.txt")
+    end
+  end
+  after :publishing, :restart
+
   desc 'Invoke a rake command on the remote server'
   task :copy_error_pages do
     on primary(:app) do
@@ -95,25 +91,47 @@ namespace :deploy do
       end
     end
   end
+  after :finishing, :copy_error_pages
 
-  before :restart, :generate_passenger_config
+  before :restart, :generate_passenger_scripts
+  desc 'generate passenger start|stop scripts'
+  task :generate_passenger_scripts do
+    on roles(:app) do
+      passenger_start = <<-EOF
+#!/bin/bash
+DIR="#{fetch(:deploy_to)}"
+export BUNDLE_GEMFILE="$DIR/current/Gemfile"
+cd $DIR && bundle exec passenger start current
+      EOF
+
+      passenger_stop = <<-EOF
+#!/bin/bash
+DIR="#{current_path}"
+cd $DIR && bundle exec passenger stop
+      EOF
+
+      upload! StringIO.new(passenger_start), "#{fetch(:deploy_to)}/passenger_start.sh"
+      upload! StringIO.new(passenger_stop),  "#{fetch(:deploy_to)}/passenger_stop.sh"
+    end
+  end
+
   desc 'generate passenger config'
   task :generate_passenger_config do
     on roles(:app) do
       port = fetch(:port)
 
       config = {
-        port:                  port,
-        environment:           fetch(:rails_env),
-        daemonize:             true,
-        log_file:              "#{shared_path}/log/passenger.log",
-        pid_file:              "#{shared_path}/tmp/pids/passenger.#{port}.pid"
+        port:        port,
+        environment: fetch(:rails_env),
+        daemonize:   true,
+        log_file:    "#{shared_path}/log/passenger.log",
+        pid_file:    "#{shared_path}/tmp/pids/passenger.#{port}.pid"
       }
 
       upload! StringIO.new(JSON.pretty_generate(config) << "\n"),  "#{current_path}/Passengerfile.json"
     end
   end
-
+  before :restart, :generate_passenger_config
 
 end
 

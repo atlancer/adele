@@ -3,7 +3,7 @@ server '78.24.221.79', user: 'adelerun', roles: %w{app db web}
 set :deploy_to, '/home/adelerun/apps/adelerun-staging'
 set :branch,    'stage'
 set :rails_env, 'stage'
-set :port, 3000
+set :port, 3003
 
 # server-based syntax
 # ======================
