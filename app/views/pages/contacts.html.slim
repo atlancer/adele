@@ -1,4 +1,70 @@
-- content_for :title, 'Студия профессиональной флористики и дизайна'
-- content_for :description, 'Adele Run - Студия профессиональной флористики и дизайна'
-- content_for :keywords, 'флористика, цветы, букеты, цветочный дизайн'
-h1 Contacts
+- content_for :title, 'About Us - Custom page title'
+- content_for :keywords, 'About Us - Custom page title'
+- content_for :description, 'About Us - Custom page title'
+/++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+/ Product Content
+.container
+  / Breadcrumbs
+  .row
+    .col-md-6
+      ul.breadcrumb-v5
+        li
+          a href="/"
+            i.fa.fa-home
+        li.active Контакты
+
+  .row.margin-bottom-60
+    .col-md-6.col-sm-6
+      /#map.height-450 style="position: relative; background-color: rgb(229, 227, 223); overflow: hidden;"
+      = link_to('https://maps.yandex.ru/2/saint-petersburg/?ll=30.275973%2C59.903049&z=16&l=map&text=%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F%2C%20%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%2C%20%D0%A1%D1%82%D0%B0%D1%80%D0%BE-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B3%D0%BE%D1%84%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%2C%2030%D0%BA1%D0%90&sll=30.313497%2C59.938531&sspn=1.104126%2C0.232566&rtext=59.901166%2C30.274923~59.905073%2C30.277789&rtt=mt&ol=geo&oll=30.277789%2C59.905073',
+                target: '_blank', title: 'Посмотреть на карте') do
+        = image_tag('static-maps.yandex.ru.png', alt: 'Студия Adele Run на карте', style: 'width: 100%; height: auto; max-width: 555px')
+
+    .col-md-6.col-sm-6
+      /h3 Get in Touch
+      /p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem
+      /hr
+
+      h3
+        /strong «Adele Run»
+        strong Adele Run
+        br
+        |студия профессиональной флористики и дизайна
+      hr
+      p
+        i.fa.fa-map-marker
+        |&nbsp;
+        = link_to('https://maps.yandex.ru/2/saint-petersburg/?ll=30.275973%2C59.903049&z=16&l=map&text=%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F%2C%20%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%2C%20%D0%A1%D1%82%D0%B0%D1%80%D0%BE-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B3%D0%BE%D1%84%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%2C%2030%D0%BA1%D0%90&sll=30.313497%2C59.938531&sspn=1.104126%2C0.232566&rtext=59.901166%2C30.274923~59.905073%2C30.277789&rtt=mt&ol=geo&oll=30.277789%2C59.905073',
+                  target: '_blank', title: 'Посмотреть на карте') do
+          |г. Санкт-Петербург,
+          br
+          |Старо-Петергофский проспект, д.30/1
+          br
+          |Станция метро «Нарвская»
+          br
+          |Бизнес-центр «Нарвские Ворота»
+      p
+        i.fa.fa-envelope
+        |&nbsp;
+        a href='mailto:adelerun@yandex.ru' adelerun@yandex.ru
+      p
+        i.fa.fa-phone
+        |&nbsp;
+        |+7 (812) 992-51-70
+      p
+        i.fa.fa-phone
+        |&nbsp;
+        |+7 (921) 992-51-70
+      p
+        i.fa.fa-phone
+        |&nbsp;
+        |+7 (981) 758-86-76
+
+      p
+        i.fa.fa-vk
+        |&nbsp;
+        = link_to('vk.com/adelerun', 'http://vk.com/adelerun')
+
+      /hr
+      /h3 Мы в социальных сетях
+

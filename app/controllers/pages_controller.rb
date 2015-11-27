@@ -9,8 +9,8 @@ class PagesController < ApplicationController
 
   def layout_for_page
     case params[:id]
-      when 'contacts'
-        'porto'
+      when 'unify'
+        'unify'
       else
         'application'
     end

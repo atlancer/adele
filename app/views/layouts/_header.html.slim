@@ -1,0 +1,133 @@
+/ === Header v5 ===
+.header-v5.header-static
+  / Topbar v3
+  .topbar-v3
+    /.search-open
+      .container
+        input type="text" class="form-control" placeholder="Search"
+        .search-close
+          i.icon-close
+    .container
+      .row
+        .col-sm-6
+          / Topbar Navigation
+          /ul.left-topbar
+            li
+              a Currency (USD)
+              ul.currency
+                li.active
+                  a href="#"
+                    |USD
+                    i.fa.fa-check
+                li
+                  a href="#" Euro
+                li
+                  a href="#" Pound
+            li
+              a Language (EN)
+              ul.language
+                li.active
+                  a href="#"
+                    |English (EN)
+                    i.fa.fa-check
+                li
+                  a href="#" Spanish (SPN)
+                li
+                  a href="#" Russian (RUS)
+                li
+                  a href="#" German (GRM)
+        .col-sm-6
+          ul.list-inline.right-topbar.pull-right
+            li
+              i.fa.fa-phone
+              |&nbsp;
+              |+7 (812) 992-51-70
+            li
+              i.fa.fa-phone
+              |&nbsp;
+              |+7 (921) 992-51-70
+            li
+              i.fa.fa-phone
+              |&nbsp;
+              |+7 (981) 758-86-76
+            /li
+              i.search.fa.fa-search.search-button
+  / Navbar
+  .navbar.navbar-default.mega-menu role="navigation"
+    .container
+      / Brand and toggle get grouped for better mobile display
+      .navbar-header
+        button.navbar-toggle type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse"
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        = link_to root_path, class: 'navbar-brand' do
+          = image_tag('unify/logo.png', id: 'logo-header', alt: "AdeleRun logo")
+
+      / Collect the nav links, forms, and other content for toggling
+      .collapse.navbar-collapse.navbar-responsive-collapse
+        / Shopping Cart
+        /ul.list-inline.shop-badge.badge-lists.badge-icons.pull-right
+          li
+            a href="#"
+              | Корзина
+              i.fa.fa-shopping-cart
+            span.badge.badge-sea.rounded-x 3
+            ul.list-unstyled.badge-open.mCustomScrollbar data-mcs-theme="minimal-dark"
+              li
+                = image_tag('unify/tmp/05.jpg')
+                button.close type="button" x
+                .overflow-h
+                  span Black Glasses
+                  small 1 x $400.00
+              li
+                = image_tag('unify/tmp/02.jpg')
+                button.close type="button" x
+                .overflow-h
+                  span Black Glasses
+                  small 1 x $400.00
+              li.subtotal
+                .overflow-h.margin-bottom-10
+                  span Subtotal
+                  span.pull-right.subtotal-cost $800.00
+                .row
+                  .col-xs-6
+                    = link_to('View Cart', '#', class: 'btn-u btn-brd btn-brd-hover btn-u-sea-shop btn-block')
+                  .col-xs-6
+                    = link_to('Checkout', '#', class: 'btn-u btn-u-sea-shop btn-block')
+        / End Shopping Cart
+
+        / Nav Menu
+        ul.nav.navbar-nav
+          / Pages
+          /li.dropdown.active
+            a href="javascript:void(0);" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" Pages
+            ul.dropdown-menu
+              li.active
+                a href="index.html" Shop UI
+              li
+                a href="#" Product Page
+              li
+                a href="#" Filter Grid Page
+              li
+                a href="#" Filter List Page
+              li
+                a href="#" Checkout
+              li
+                a href="#" Login
+              li
+                a href="#" Register
+          / End Pages
+          /li
+            a href="#" Main Demo
+          /li
+            a href="#" Main Demo
+          /li
+            a href="#" Main Demo
+          = menu_item('Наши работы', 'portfolio')
+          = menu_item('Курсы', 'courses')
+          = menu_item('Контакты', 'contacts')
+      / End Nav Menu
+  / End Navbar
+/ === End Header v5 ===

@@ -18,12 +18,13 @@ gem 'jquery-rails'
 gem 'slim-rails'
 gem 'friendly_id'
 gem 'awesome_nested_set'
+gem 'font-awesome-rails'
 
 # gem 'unicorn'
 gem 'passenger'
 
-gem 'twitter-bootstrap-rails'
-gem 'high_voltage', '~> 2.3.0'
+# gem 'twitter-bootstrap-rails'
+gem 'high_voltage', '~> 2.4.0'
 # gem 'sitemap_generator'
 
 group :development do
