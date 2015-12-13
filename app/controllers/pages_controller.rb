@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   include HighVoltage::StaticPage
 
-  layout :layout_for_page
+  # layout :layout_for_page
 
   # todo add cache
 

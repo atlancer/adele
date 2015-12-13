@@ -10,7 +10,7 @@ html lang="en"
     link href="favicon.ico" rel="shortcut icon"
 
     = stylesheet_link_tag "//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin"
-    = stylesheet_link_tag 'unify', media: 'all'
+    = stylesheet_link_tag 'application', media: 'all'
 
     = javascript_include_tag 'unify'
     javascript:
@@ -24,7 +24,7 @@ html lang="en"
         $("img").lazyload();
       });
     /[if lt IE 9]
-      = javascript_include_tag 'unify/lt_ie9'
+    //  = javascript_include_tag 'unify/lt_ie9'
 
 body.header-fixed
   .wrapper
