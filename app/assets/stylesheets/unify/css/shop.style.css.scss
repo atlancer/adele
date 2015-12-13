@@ -7,12 +7,12 @@
 */
 
 /*Import Global Compulsory CSS Files*/
-@import url(app.css);
-@import url(shop.plugins.css);
-@import url(shop.blocks.css);
+@import asset-url('unify/css/app.css');
+@import asset-url('unify/css/shop.plugins.css');
+@import asset-url('unify/css/shop.blocks.css');
 
 /*Import CSS Plugins*/
-@import url(plugins/style-switcher.css);
+@import asset-url('unify/css/plugins/style-switcher.css');
 
 * {
     font-family: 'Open Sans', sans-serif;
