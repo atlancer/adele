@@ -1,0 +1,4 @@
+.col-md-4
+  = link_to(image_path(filepath.sub('_thumb.', '.')), class: 'fancybox img-hover-v1', rel: 'gallery') do
+    span
+      = image_tag(filepath, class: 'img-responsive')

@@ -63,7 +63,7 @@
           span.icon-bar
           span.icon-bar
         = link_to root_path, class: 'navbar-brand' do
-          = image_tag('unify/logo.png', id: 'logo-header', alt: "AdeleRun logo")
+          = image_tag('111.png', id: 'logo-header', alt: "AdeleRun logo")
 
       / Collect the nav links, forms, and other content for toggling
       .collapse.navbar-collapse.navbar-responsive-collapse
@@ -125,9 +125,10 @@
             a href="#" Main Demo
           /li
             a href="#" Main Demo
-          = menu_item('Наши работы', 'portfolio')
-          = menu_item('Курсы', 'courses')
-          = menu_item('Контакты', 'contacts')
+          /= menu_item('Заказать', '/zakaz')
+          = menu_item('Наши работы', '/portfolio/bouquets', '/portfolio')
+          = menu_item('Обучение', '/training')
+          = menu_item('Контакты', '/contacts')
       / End Nav Menu
   / End Navbar
 / === End Header v5 ===

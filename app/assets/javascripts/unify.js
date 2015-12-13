@@ -20,10 +20,12 @@
 //= require unify/plugins/scrollbar/js/jquery.mCustomScrollbar.concat.min
 //= require unify/plugins/revolution-slider/rs-plugin/js/jquery.themepunch.tools.min
 //= require unify/plugins/revolution-slider/rs-plugin/js/jquery.themepunch.revolution.min
+//= require unify/plugins/fancybox/source/jquery.fancybox.pack
 //= require unify/js/custom
 //= require unify/js/shop.app
 //= require unify/js/plugins/owl-carousel
 //= require unify/js/plugins/revolution-slider
+//= require unify/js/plugins/fancy-box
 
 
 

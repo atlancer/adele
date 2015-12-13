@@ -36,6 +36,8 @@ group :development do
   gem 'capistrano-rails'
   gem 'capistrano-passenger'
   gem 'capistrano-shell'
+  # for rake task
+  gem 'mini_magick'
 end
 
 group :development, :test do

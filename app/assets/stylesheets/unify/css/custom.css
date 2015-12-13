@@ -1,1 +1,45 @@
 /* Add here all your css styles (customizations) */
+.sidebar-nav-v1 {
+    /*TODO test with mobile*/
+    /*position: fixed;*/
+    /*width: 260px;*/
+    /*top: 127px;*/
+}
+.sidebar-nav-v1 > li.active,
+.sidebar-nav-v1 > li.active:hover {
+  background: #18ba9b;
+}
+
+.sidebar-nav-v1 li a {
+    color: #687074;
+}
+
+.sidebar-nav-v1 li.active a:hover {
+    color: #fff;
+}
+
+.sidebar-nav-v1 li a:hover {
+    color: #18ba9b;
+}
+
+.portfolio{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.contacts {
+    font-size: large;
+}
+
+.fancybox-overlay {
+    z-index: 10100;
+}
+
+.fancybox-wrap{
+    z-index: 10200;
+}
+
+.fancybox-opened {
+    z-index: 10300;
+}
+

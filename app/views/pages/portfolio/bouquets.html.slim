@@ -1,0 +1,24 @@
+- content_for :title, 'Наши работы: Букеты'
+- content_for :keywords, 'Наши работы'
+- content_for :description, 'Наши работы'
+/++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+/ Product Content
+
+.container.margin-top-20
+  /.heading.heading-v1.margin-top-20.margin-bottom-20
+    h2 Наши работы
+  .row
+    .col-md-3
+      = render partial: 'portfolio/navigation'
+    .col-md-9
+      .heading.heading-v4.margin-bottom-20
+        h2 Букеты
+      = render partial: 'portfolio/row', collection: portfolio(:bouquets), as: :array
+
+      .row.margin-bottom-30
+        .col-md-4
+          br
+        .col-md-4
+          br
+        .col-md-4
+          br
