@@ -1,4 +1,7 @@
 TODO:
+!! lazy load portfolio thumbs
+!! convert thumb from master-file, if erorr - don't convert from original
+
 - sitemap https://github.com/kjvarga/sitemap_generator
 - footer
 - error page

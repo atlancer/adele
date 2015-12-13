@@ -26,7 +26,7 @@
 //= require unify/js/plugins/owl-carousel
 //= require unify/js/plugins/revolution-slider
 //= require unify/js/plugins/fancy-box
-
+//= require jquery.lazyload
 
 
 //<!-- JS Global Compulsory -->

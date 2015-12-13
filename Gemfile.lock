@@ -81,6 +81,8 @@ GEM
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (1.8.3)
+    lazyload-rails (0.3.1)
+      nokogiri (~> 1.5)
     libv8 (3.16.14.13)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
@@ -193,6 +195,7 @@ DEPENDENCIES
   friendly_id
   high_voltage (~> 2.4.0)
   jquery-rails
+  lazyload-rails
   mini_magick
   mysql2 (~> 0.3.18)
   passenger

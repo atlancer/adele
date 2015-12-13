@@ -27,6 +27,8 @@ gem 'passenger'
 gem 'high_voltage', '~> 2.4.0'
 # gem 'sitemap_generator'
 
+gem 'lazyload-rails'
+
 group :development do
   gem 'quiet_assets'
 
