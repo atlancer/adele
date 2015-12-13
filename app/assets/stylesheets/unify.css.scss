@@ -11,6 +11,9 @@
  * file per style scope.
  *
  *= require 'unify/bootstrap.min.css'
+ *= require 'unify/css/app.css'
+ *= require 'unify/css/shop.plugins.css'
+ *= require 'unify/css/shop.blocks.css'
  *= require 'unify/css/shop.style.css'
  *= require 'unify/css/style.css'
  *= require 'unify/css/headers/header-v5.css'
