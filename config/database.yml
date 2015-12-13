@@ -10,6 +10,10 @@ development:
   <<: *default
   database: adelerun-rails_development
 
+stage:
+  <<: *default
+  database: adelerun-rails_development
+
 test:
   <<: *default
   database: adelerun-rails_test
