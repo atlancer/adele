@@ -143,5 +143,44 @@ end
 # error_page 500 502 503 504 /500.html;
 # error_page 404 /404.html;
 
+# ######################################################################################################################
+# compile assets local with capistrano 3.2.1 and rails 4.1.1 (fully integrated)
+# https://gist.github.com/twetzel/66de336327f79beac0e0
+#
+# Clear existing task so we can replace it rather than "add" to it.
+Rake::Task["deploy:compile_assets"].clear
 
+namespace :deploy do
+
+  desc 'Compile assets'
+  task :compile_assets => [:set_rails_env] do
+    # invoke 'deploy:assets:precompile'
+    invoke 'deploy:assets:precompile_local'
+    invoke 'deploy:assets:backup_manifest'
+  end
+
+
+  namespace :assets do
+
+    desc "Precompile assets locally and then rsync to web servers"
+    task :precompile_local do
+      # compile assets locally
+      run_locally do
+        execute "RAILS_ENV=#{fetch(:stage)} bundle exec rake assets:precompile"
+      end
+
+      # rsync to each server
+      local_dir = "./public/assets/"
+      on roles( fetch(:assets_roles, [:web]) ) do
+        # this needs to be done outside run_locally in order for host to exist
+        remote_dir = "#{host.user}@#{host.hostname}:#{release_path}/public/assets/"
+
+        run_locally { execute "rsync -av --delete #{local_dir} #{remote_dir}" }
+      end
+
+      # clean up
+      run_locally { execute "rm -rf #{local_dir}" }
+    end
+  end
+end
 
