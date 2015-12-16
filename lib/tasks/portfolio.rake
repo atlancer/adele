@@ -51,9 +51,9 @@ namespace :portfolio do
               # convert << filepath_to_origin
               convert << from_filepath
               convert << '-resample' << '72'
-              convert << '-resize' << '263x166^'
+              convert << '-resize' << '338x216^'
               convert << '-gravity' << 'center'
-              convert << '-crop' << '263x166+0+0'
+              convert << '-crop' << '338x216+0+0'
               convert << filepath_to_thumb
             end
             :converted
