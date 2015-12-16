@@ -48,7 +48,9 @@ namespace :portfolio do
           begin
             # convert DSC_0010-75-70-strip.jpg -resize '263x166^' -gravity center -crop '263x166+0+0' output.jpg
             MiniMagick::Tool::Convert.new do |convert|
-              convert << filepath_to_origin
+              # convert << filepath_to_origin
+              convert << from_filepath
+              convert << '-resample' << '72'
               convert << '-resize' << '263x166^'
               convert << '-gravity' << 'center'
               convert << '-crop' << '263x166+0+0'
