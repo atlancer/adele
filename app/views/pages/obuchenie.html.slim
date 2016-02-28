@@ -133,37 +133,73 @@
                 br
                 |В стоимость занятий включено: живые цветы и стаффаж, разнообразный декор и флористический материал, инструмент для обучения, кофе-брейки, раздаточный материал.
 
-  .row
+  .row.margin-bottom-50
     .col-md-3
     .col-md-6
       button.btn-u.btn-u-lg.btn-block.margin-bottom-30 data-toggle="modal" data-target="#responsive"
         i.fa.fa-bell-o
-        |&nbsp;&nbsp;Записаться на обучение
+        |&nbsp;&nbsp;Оставить заявку на обучение
     .col-md-3
 
 #responsive.modal.fade tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
   .modal-dialog
     .modal-content
-      .modal-header
-        button.close type="button" data-dismiss="modal" aria-hidden="true" &times;
-        h4#myModalLabel4.modal-title Отправить заявку на обучение
-      .modal-body
-        .row
-          .col-md-12
-            /h4 Some Input
-            p
-              input.form-control type="text"
-            p
-              input.form-control type="text"
-            p
-              input.form-control type="text"
-          /.col-md-6
-            h4 More Input
-            p
-              input.form-control type="text"
-      .modal-footer
-        button.btn-u.btn-u-primary.btn-block type="button" data-dismiss="modal" Отправить заявку
+      = form_tag('/obuchenie', method: :post) do
+        .modal-header
+          button.close type="button" data-dismiss="modal" aria-hidden="true" &times;
+          h4#myModalLabel4.modal-title Заявка на обучение
+        .modal-body
+          .row
+            .col-md-12
+              /h4 Some Input
+              = hidden_field_tag :authenticity_token, form_authenticity_token
+              p
+                span Ваше имя и фамилия
+                input#name.form-control type="text" name='name'
+              p
+                span Адрес электронной почты
+                input#email.form-control type="text" name='email'
+              p
+                span Номер телефона
+                input#phone.form-control type="text" name='phone'
+            /.col-md-6
+            /  h4 More Input
+              p
+                input.form-control type="text"
+        .modal-footer
+          button#send.btn-u.btn-u-primary.btn-block type="submit"
+            |Отправить заявку
+            i.fa.fa-paper-plane.margin-left-10
 
+/#thanks.modal.fade.bs-example-modal-sm tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" style="display: none;"
+  .modal-dialog.modal-sm
+    .modal-content
+      .modal-header
+        /button.close type="button" data-dismiss="modal" aria-hidden="true" &times;
+      .modal-body
+        p
+          |Спасибо !
+          br
+          |Мы получили заявку и скоро свяжемся с Вами !
+
+      .modal-footer
+        button.btn-u.btn-u-primary.btn-block type="button" data-dismiss="modal" Ок
+
+//javascript:
+//  $('#send').click(function() {
+//    $('.modal').modal('hide');
+//    $('#name').val('');
+//    $('#email').val('');
+//    $('#phone').val('');
+//
+//    $.post('/obuchenie', $('#send_form').serialize())
+//      .done(function() {
+//        $('#thanks').modal('show');
+//      }).fail(function() {
+//        alert( "При отправке заявки произошла ошибка. Попробуйте позже." );
+//      });
+//  });
+//
 /p
   |Окончив базовый курс вы приобретаете:
   |

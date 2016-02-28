@@ -30,4 +30,4 @@ body.header-fixed
   .wrapper
     = render 'layouts/header'
     = yield
-    = render 'layouts/footer'
+    = render 'layouts/footer' if need_footer?

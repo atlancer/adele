@@ -23,4 +23,8 @@ module ApplicationHelper
     path = Rails.root.join('app', 'assets', 'images', 'portfolio', folder.to_s, '*_thumb.*')
     Dir[path].map{|filepath| filepath.sub(/^.*images\//, '') }.sort.each_slice(3).to_a
   end
+
+  def need_footer?
+    request.fullpath !~ Regexp.new(Regexp.quote('zayavka_poluchena'))
+  end
 end

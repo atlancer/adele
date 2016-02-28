@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root 'home#index'
 
+  post '/obuchenie', to: 'requests#create' # todo add type of request as obuchenie
+
   # root to: 'pages#show', id: 'contacts'
 
   # You can have the root of your site routed with "root"
