@@ -1,90 +1,158 @@
-erb:
-  <div class="footer-v2" id="footer-v2">
-          <div class="footer">
-              <div class="container">
-                  <div class="row">
-                      <!-- About -->
-                      <div class="col-md-3 md-margin-bottom-40">
-                          <a href="index.html"><img alt="" src="assets/img/logo1-default.png" class="footer-logo" id="logo-footer"></a>
-                          <p class="margin-bottom-20">Unify is an incredibly beautiful responsive Bootstrap Template for corporate and creative professionals.</p>
+#footer-v2.footer-v2
+  .footer
+    .container
+      .row
+        / <!-- About -->
+        .col-md-3.md-margin-bottom-40
+          = link_to root_path do
+            = image_tag('adelerun_logo.png', id: 'logo-footer', alt: 'AdeleRun logo', class: 'footer-logo')
+          p.margin-bottom-20
+            | Cтудия профессиональной флористики и дизайна.
+            /| Unify is an incredibly beautiful responsive Bootstrap Template for corporate and creative professionals.
+        .col-md-3.md-margin-bottom-40
+          ul.list-unstyled.link-list
+            li
+              a href="/"
+                | Наши работы
+            li
+              a href="/"
+                | обучение
+            li
+              a href="/"
+                | Контакты
+            /li
+            /  a href="/"
+            /    | About
+        .col-md-3.md-margin-bottom-40
+          address.md-margin-bottom-40
+            i.fa.fa-home
+            |г. Санкт-Петербург,
+            br
+            |Старо-Петергофский проспект, д.30/1
+            i.fa.fa-phone
+            |+7 (812) 992-51-70
+            br
+            i.fa.fa-phone
+            |+7 (921) 992-51-70
+            br
+            i.fa.fa-phone
+            |+7 (981) 758-86-76
+            br
+            i.fa.fa-globe
+            = link_to 'adelerun.ru', 'http://adelerun.ru'
+            br
+            i.fa.fa-envelope
+            a href='mailto:adelerun@yandex.ru' adelerun@yandex.ru
+          /.headline
+            h2.heading-sm Контакты
+        .col-md-3.md-margin-bottom-40
+          ul.list-unstyled
+            li
+              i.fa.fa-vk
+              | &nbsp;&nbsp;&nbsp;
+              = link_to('vk.com/adelerun', 'http://vk.com/adelerun')
 
-                          <form class="footer-subsribe">
-                              <div class="input-group">
-                                  <input type="text" placeholder="Email Address" class="form-control">
-                                  <span class="input-group-btn">
-                                      <button type="button" class="btn-u">Go</button>
-                                  </span>
-                              </div>
-                          </form>
-                      </div>
-                      <!-- End About -->
 
-                      <!-- Link List -->
-                      <div class="col-md-3 md-margin-bottom-40">
-                          <div class="headline"><h2 class="heading-sm">Useful Links</h2></div>
-                          <ul class="list-unstyled link-list">
-                              <li><a href="#">About us</a><i class="fa fa-angle-right"></i></li>
-                              <li><a href="#">Portfolio</a><i class="fa fa-angle-right"></i></li>
-                              <li><a href="#">Latest jobs</a><i class="fa fa-angle-right"></i></li>
-                              <li><a href="#">Community</a><i class="fa fa-angle-right"></i></li>
-                              <li><a href="#">Contact us</a><i class="fa fa-angle-right"></i></li>
-                          </ul>
-                      </div>
-                      <!-- End Link List -->
 
-                      <!-- Latest Tweets -->
-                      <div class="col-md-3 md-margin-bottom-40">
-                          <div class="latest-tweets">
-                              <div class="headline"><h2 class="heading-sm">Latest Tweets</h2></div>
-                              <div class="latest-tweets-inner">
-                                  <i class="fa fa-twitter"></i>
-                                  <p>
-                                      <a href="#">@htmlstream</a>
-                                      At vero seos etodela ccusamus et
-                                      <a href="#">http://t.co/sBav7dm</a>
-                                      <small class="twitter-time">2 hours ago</small>
-                                  </p>
-                              </div>
-                              <div class="latest-tweets-inner">
-                                  <i class="fa fa-twitter"></i>
-                                  <p>
-                                      <a href="#">@htmlstream</a>
-                                      At vero seos etodela ccusamus et
-                                      <a href="#">http://t.co/sBav7dm</a>
-                                      <small class="twitter-time">4 hours ago</small>
-                                  </p>
-                              </div>
-                          </div>
-                      </div>
-                      <!-- End Latest Tweets -->
+/                          <div class="headline"><h2 class="heading-sm">Contact Us</h2></div>
+/                          <address class="md-margin-bottom-40">
+/                              <i class="fa fa-home"></i>25, Lorem Lis Street, California, US <br>
+/                              <i class="fa fa-phone"></i>Phone: 800 123 3456 <br>
+/                              <i class="fa fa-globe"></i>Website: <a href="#">www.htmlstream.com</a> <br>
+/                              <i class="fa fa-envelope"></i>Email: <a href="mailto:info@anybiz.com">info@anybiz.com</a>
+/                          </address>
 
-                      <!-- Address -->
-                      <div class="col-md-3 md-margin-bottom-40">
-                          <div class="headline"><h2 class="heading-sm">Contact Us</h2></div>
-                          <address class="md-margin-bottom-40">
-                              <i class="fa fa-home"></i>25, Lorem Lis Street, California, US <br>
-                              <i class="fa fa-phone"></i>Phone: 800 123 3456 <br>
-                              <i class="fa fa-globe"></i>Website: <a href="#">www.htmlstream.com</a> <br>
-                              <i class="fa fa-envelope"></i>Email: <a href="mailto:info@anybiz.com">info@anybiz.com</a>
-                          </address>
 
-                          <!-- Social Links -->
-                          <ul class="social-icons">
-                              <li><a class="rounded-x social_facebook" data-original-title="Facebook" href="#"></a></li>
-                              <li><a class="rounded-x social_twitter" data-original-title="Twitter" href="#"></a></li>
-                              <li><a class="rounded-x social_googleplus" data-original-title="Goole Plus" href="#"></a></li>
-                              <li><a class="rounded-x social_linkedin" data-original-title="Linkedin" href="#"></a></li>
-                          </ul>
-                          <!-- End Social Links -->
-                      </div>
-                      <!-- End Address -->
-                  </div>
-              </div>
-          </div><!--/footer-->
 
-          <div class="copyright">
-              <div class="container">
-                  <p class="text-center">2015 &copy; All Rights Reserved. Unify Theme by <a href="https://twitter.com/htmlstream" target="_blank">Htmlstream</a></p>
-              </div>
-          </div><!--/copyright-->
-      </div>
+/erb:
+/  <div class="footer-v2" id="footer-v2">
+/          <div class="footer">
+/              <div class="container">
+/                  <div class="row">
+/
+/                      <!-- About -->
+/                      <div class="col-md-3 md-margin-bottom-40">
+/
+/                          <a href="index.html"><img alt="" src="assets/img/logo1-default.png" class="footer-logo" id="logo-footer"></a>
+/                          <p class="margin-bottom-20">Unify is an incredibly beautiful responsive Bootstrap Template for corporate and creative professionals.</p>
+/
+/                          <form class="footer-subsribe">
+/                              <div class="input-group">
+/                                  <input type="text" placeholder="Email Address" class="form-control">
+/                                  <span class="input-group-btn">
+/                                      <button type="button" class="btn-u">Go</button>
+/                                  </span>
+/                              </div>
+/                          </form>
+/                      </div>
+/                      <!-- End About -->
+/
+/                      <!-- Link List -->
+/                      <div class="col-md-3 md-margin-bottom-40">
+/                          <div class="headline"><h2 class="heading-sm">Useful Links</h2></div>
+/                          <ul class="list-unstyled link-list">
+/                              <li><a href="#">About us</a><i class="fa fa-angle-right"></i></li>
+/                              <li><a href="#">Portfolio</a><i class="fa fa-angle-right"></i></li>
+/                              <li><a href="#">Latest jobs</a><i class="fa fa-angle-right"></i></li>
+/                              <li><a href="#">Community</a><i class="fa fa-angle-right"></i></li>
+/                              <li><a href="#">Contact us</a><i class="fa fa-angle-right"></i></li>
+/                          </ul>
+/                      </div>
+/                      <!-- End Link List -->
+/
+/                      <!-- Latest Tweets -->
+/                      <div class="col-md-3 md-margin-bottom-40">
+/                          <div class="latest-tweets">
+/                              <div class="headline"><h2 class="heading-sm">Latest Tweets</h2></div>
+/                              <div class="latest-tweets-inner">
+/                                  <i class="fa fa-twitter"></i>
+/                                  <p>
+/                                      <a href="#">@htmlstream</a>
+/                                      At vero seos etodela ccusamus et
+/                                      <a href="#">http://t.co/sBav7dm</a>
+/                                      <small class="twitter-time">2 hours ago</small>
+/                                  </p>
+/                              </div>
+/                              <div class="latest-tweets-inner">
+/                                  <i class="fa fa-twitter"></i>
+/                                  <p>
+/                                      <a href="#">@htmlstream</a>
+/                                      At vero seos etodela ccusamus et
+/                                      <a href="#">http://t.co/sBav7dm</a>
+/                                      <small class="twitter-time">4 hours ago</small>
+/                                  </p>
+/                              </div>
+/                          </div>
+/                      </div>
+/                      <!-- End Latest Tweets -->
+/
+/                      <!-- Address -->
+/                      <div class="col-md-3 md-margin-bottom-40">
+/                          <div class="headline"><h2 class="heading-sm">Contact Us</h2></div>
+/                          <address class="md-margin-bottom-40">
+/                              <i class="fa fa-home"></i>25, Lorem Lis Street, California, US <br>
+/                              <i class="fa fa-phone"></i>Phone: 800 123 3456 <br>
+/                              <i class="fa fa-globe"></i>Website: <a href="#">www.htmlstream.com</a> <br>
+/                              <i class="fa fa-envelope"></i>Email: <a href="mailto:info@anybiz.com">info@anybiz.com</a>
+/                          </address>
+/
+/                          <!-- Social Links -->
+/                          <ul class="social-icons">
+/                              <li><a class="rounded-x social_facebook" data-original-title="Facebook" href="#"></a></li>
+/                              <li><a class="rounded-x social_twitter" data-original-title="Twitter" href="#"></a></li>
+/                              <li><a class="rounded-x social_googleplus" data-original-title="Goole Plus" href="#"></a></li>
+/                              <li><a class="rounded-x social_linkedin" data-original-title="Linkedin" href="#"></a></li>
+/                          </ul>
+/                          <!-- End Social Links -->
+/                      </div>
+/                      <!-- End Address -->
+/                  </div>
+/              </div>
+/          </div><!--/footer-->
+/
+/          <div class="copyright">
+/              <div class="container">
+/                  <p class="text-center">2015 &copy; All Rights Reserved. Unify Theme by <a href="https://twitter.com/htmlstream" target="_blank">Htmlstream</a></p>
+/              </div>
+/          </div><!--/copyright-->
+/      </div>

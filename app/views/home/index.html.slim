@@ -2,7 +2,7 @@
 .container
   / Breadcrumbs
   /.row
-  .heading.heading-v1.margin-top-20.margin-bottom-20
+  /.heading.heading-v1.margin-top-20.margin-bottom-20
     h2 Сейчас на витрине
     p Готовые букеты и композиции, которые можно приобрести прямо сейчас.
 
@@ -15,23 +15,36 @@
         li.active Блоки
 
   / === Illustration v1 ===
-  .row.margin-bottom-60
+  .row.margin-bottom-60.margin-top-20
     .col-md-6.md-margin-bottom-30
       .overflow-h
-        .illustration-v1.illustration-img1
-          .illustration-bg
-            .illustration-ads.ad-details-v1
-              h3
-                |NEW YEAR
-                strong
-                  |  SALE
-                |  30% - 60%
-                strong
-                  |  off
-              a.btn-u.btn-brd.btn-brd-hover.btn-u-light href="#" Shop Now
+        = link_to('#', class: 'illustration-v1 illustration-img1') do
+          span.illustration-bg
+            span.illustration-ads.ad-details-v2
+              /span.item-time Spring 2014
+              span.item-name Эксклюзив
+
+          /.illustration-v1.illustration-img1
+            .illustration-bg
+              .illustration-ads.ad-details-v1
+                /h3.item-name Обучение
+                h3
+                  |ЭКСЛЮЗИВНЫЕ РАБОТЫ
+                  /strong
+                    |  SALE
+                  /|  30% - 60%
+                  /strong
+                    |  off
+                /a.btn-u.btn-brd.btn-brd-hover.btn-u-light href="#" Shop Now
     .col-md-6
       .overflow-h
-        a.illustration-v1.illustration-img2 href="#"
+        = link_to('/obuchenie', class: 'illustration-v1 illustration-img2') do
+          span.illustration-bg
+            span.illustration-ads.ad-details-v2
+              /span.item-time Spring 2014
+              span.item-name Обучение
+
+        /a.illustration-v1.illustration-img2 href="#"
           span.illustration-bg
             span.illustration-ads.ad-details-v2
               /span.item-time Spring 2014

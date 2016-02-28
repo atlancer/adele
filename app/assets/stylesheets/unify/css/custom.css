@@ -101,3 +101,9 @@
     font-size: 14px !important;
     /*letter-spacing: 0px;*/
 }
+
+.footer-v2 .footer {
+    /*background: none repeat scroll 0 0 #f7f7f7;*/
+    /*border-top: 3px solid #eee;*/
+    padding: 40px 0 20px 0;
+}
