@@ -126,7 +126,7 @@ cd $DIR && #{rvmsudo} bundle exec passenger stop --pid-file "#{shared_path}/tmp/
         port:        port,
         environment: fetch(:rails_env),
         daemonize:   true,
-        log_file:    "#{shared_path}/log/passenger.log",
+        log_file:    "#{shared_path}/log/passenger.#{port}.log",
         pid_file:    "#{shared_path}/tmp/pids/passenger.#{port}.pid"
       }
 

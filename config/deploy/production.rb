@@ -1,6 +1,6 @@
 set :user, 'adelerun'
 
-server '78.24.221.79', user: fetch(:user), roles: %w{app db web}
+server '85.143.221.34', user: fetch(:user), roles: %w{app db web}
 
 set :deploy_to, '/home/adelerun/apps/adelerun'
 set :branch,    'master'
