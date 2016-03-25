@@ -1,4 +1,4 @@
-server '78.24.221.79', user: 'adelerun', roles: %w{app db web}
+server '85.143.221.34', user: 'adelerun', roles: %w{app db web}
 
 set :deploy_to, '/home/adelerun/apps/adelerun-staging'
 set :branch,    'stage'
