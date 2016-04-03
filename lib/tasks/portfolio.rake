@@ -4,6 +4,7 @@ namespace :portfolio do
     folder_to   = Rails.root.join('app', 'assets', 'images', 'portfolio')
     from_folder = Rails.root.join('portfolio_files')
     from_files  = File.join(from_folder, '*', '*.jpg')
+    watermark_file = Rails.root.join('app', 'assets', 'images', 'watermark.png')
 
     Dir.glob(from_files, File::FNM_CASEFOLD).each do |from_filepath|
       subfolder     = File.dirname(from_filepath).split('/').last
@@ -32,6 +33,16 @@ namespace :portfolio do
               convert << '-strip'
               convert << filepath_to_origin
             end
+
+            # composite -dissolve 40% -gravity center water3.png file.jpg file__.jpg
+            MiniMagick::Tool::Composite.new do |composite|
+              composite << '-dissolve' << '40%'
+              composite << '-gravity' << 'center'
+              composite << watermark_file
+              composite << filepath_to_origin
+              composite << filepath_to_origin
+            end
+
             :converted
           rescue
             :ERROR
