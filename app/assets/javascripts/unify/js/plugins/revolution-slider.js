@@ -1,7 +1,7 @@
 var RevolutionSlider = function () {
 
     return {
-        
+
         //Revolution Slider - Full Width
         initRSfullWidth: function () {
 		    var revapi;
@@ -9,7 +9,7 @@ var RevolutionSlider = function () {
 	            revapi = jQuery('.tp-banner').revolution(
 	            {
 	                delay:9000,
-	                startwidth:1170,
+	                startwidth:700,
 	                startheight:500,
 	                hideThumbs:10,
 					navigationStyle:"preview4"
@@ -35,7 +35,7 @@ var RevolutionSlider = function () {
 	                fullScreenOffsetContainer: ".header"
 	            });
 	        });
-        }        
+        }
 
     };
-}();        
+}();
