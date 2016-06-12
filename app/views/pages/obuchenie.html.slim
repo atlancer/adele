@@ -135,8 +135,8 @@
 
   .row.margin-bottom-50
     .col-md-3
-    .col-md-6
-      button.btn-u.btn-u-lg.btn-block.margin-bottom-30 data-toggle="modal" data-target="#responsive"
+    .col-md-6#zbutton
+      button.btn-u.btn-u-lg.btn-block.margin-bottom-30 data-toggle="modal"
         i.fa.fa-bell-o
         |&nbsp;&nbsp;Оставить заявку на обучение
     .col-md-3
@@ -171,19 +171,38 @@
             |Отправить заявку
             i.fa.fa-paper-plane.margin-left-10
 
-/#thanks.modal.fade.bs-example-modal-sm tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" style="display: none;"
-  .modal-dialog.modal-sm
-    .modal-content
-      .modal-header
-        /button.close type="button" data-dismiss="modal" aria-hidden="true" &times;
-      .modal-body
-        p
-          |Спасибо !
-          br
-          |Мы получили заявку и скоро свяжемся с Вами !
+javascript:
+  $("#zbutton").click(function(event){
+    $('#name').val('');
+    $('#email').val('');
+    $('#phone').val('');
+    $("#responsive").modal('show');
+  });
 
-      .modal-footer
-        button.btn-u.btn-u-primary.btn-block type="button" data-dismiss="modal" Ок
+  $(document).ready(function(){
+    $('#send').prop('disabled',true);
+    $('#name').keyup(function(){
+      if ($('#name').val().length  > 0 &&
+          $('#email').val().length > 0 &&
+          $('#phone').val().length > 0) {
+          $('#send').prop('disabled', false); }
+      else { $('#send').prop('disabled', true); }
+    });
+    $('#email').keyup(function(){
+      if ($('#name').val().length  > 0 &&
+          $('#email').val().length > 0 &&
+          $('#phone').val().length > 0) {
+          $('#send').prop('disabled', false); }
+      else { $('#send').prop('disabled', true); }
+    });
+    $('#phone').keyup(function(){
+      if ($('#name').val().length  > 0 &&
+          $('#email').val().length > 0 &&
+          $('#phone').val().length > 0) {
+          $('#send').prop('disabled', false); }
+      else { $('#send').prop('disabled', true); }
+    });
+  });
 
 //javascript:
 //  $('#send').click(function() {
