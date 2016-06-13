@@ -1,0 +1,52 @@
+/ === Header v5 ===
+.header-v5.header-static
+  / Topbar v3
+  .topbar-v3
+    /.search-open
+      .container
+        input type="text" class="form-control" placeholder="Search"
+        .search-close
+          i.icon-close
+    .container
+      .row
+        .col-sm-6
+          / Topbar Navigation
+          ul.left-topbar
+            li
+              = link_to('http://vk.com/adelerun') do
+                i.fa.fa-vk
+            /li
+              a Language (EN)
+              ul.language
+                li.active
+                  a href="#"
+                    |English (EN)
+                    i.fa.fa-check
+                li
+                  a href="#" Spanish (SPN)
+                li
+                  a href="#" Russian (RUS)
+                li
+                  a href="#" German (GRM)
+        .col-sm-6
+          ul.list-inline.right-topbar.pull-right
+            li
+              i.fa.fa-phone
+              |&nbsp;
+              a href='tel:+78129925170'
+                |+7 (812) 992-51-70
+            li
+              i.fa.fa-phone
+              |&nbsp;
+              a href='tel:+79219925170'
+                |+7 (921) 992-51-70
+            li
+              i.fa.fa-phone
+              |&nbsp;
+              a href='tel:+79817588676'
+                |+7 (981) 758-86-76
+            /li
+              i.search.fa.fa-search.search-button
+  / Navbar
+  = render partial: 'layouts/navigation'
+/ === End Header v5 ===

@@ -1,0 +1,5 @@
+- margin = filepath_counter == 2 ? '' : 'md-margin-bottom-30'
+.col-md-4 class="#{margin}"
+  = link_to(image_path(filepath.sub('_thumb.', '.')), class: 'fancybox img-hover-v1', rel: 'gallery') do
+    span
+      = image_tag(filepath, class: 'img-responsive', lazy: true)

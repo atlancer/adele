@@ -18,13 +18,16 @@ gem 'jquery-rails'
 gem 'slim-rails'
 gem 'friendly_id'
 gem 'awesome_nested_set'
+gem 'font-awesome-rails'
 
 # gem 'unicorn'
 gem 'passenger'
 
-gem 'twitter-bootstrap-rails'
-gem 'high_voltage', '~> 2.3.0'
+# gem 'twitter-bootstrap-rails'
+gem 'high_voltage', '~> 2.4.0'
 # gem 'sitemap_generator'
+
+gem 'lazyload-rails'
 
 group :development do
   gem 'quiet_assets'
@@ -35,6 +38,8 @@ group :development do
   gem 'capistrano-rails'
   gem 'capistrano-passenger'
   gem 'capistrano-shell'
+  # for rake task
+  gem 'mini_magick'
 end
 
 group :development, :test do
@@ -47,3 +52,5 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
+
+# gem 'jquery-validation-rails'

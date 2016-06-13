@@ -1,2 +1,316 @@
-h1 asdasd
-p asdad
+.container
+  .row
+  .tp-banner-container
+    .tp-banner
+      ul
+        / SLIDE
+        li.revolution-mch-1 data-transition="fade" data-slotamount="5" data-masterspeed="1000" data-title="Slide 1"
+          = image_tag('slider2/1.jpg', alt: '', data: { bgfit: 'cover', bgposition: 'center center', bgrepeat: 'no-repeat' })
+          /erb:
+            <div class="tp-caption revolution-ch1 sft start"
+                              data-x="center"
+                              data-hoffset="0"
+                              data-y="100"
+                              data-speed="1500"
+                              data-start="500"
+                              data-easing="Back.easeInOut"
+                              data-endeasing="Power1.easeIn"
+                              data-endspeed="300">
+                              Эксклюзив
+                              </div>
+
+                              <!-- LAYER -->
+                              <div class="tp-caption revolution-ch2 sft"
+                              data-x="center"
+                              data-hoffset="-100"
+                              data-y="190"
+                              data-speed="1400"
+                              data-start="2000"
+                              data-easing="Power4.easeOut"
+                              data-endspeed="300"
+                              data-endeasing="Power1.easeIn"
+                              data-captionhidden="off"
+                              style="z-index: 6">
+                              Что-то необычное и неповторимое<br/>
+                              key digital services on web and mobile.
+                              </div>
+
+                              <!-- LAYER -->
+                              <div class="tp-caption sft"
+                              data-x="center"
+                              data-hoffset="0"
+                              data-y="310"
+                              data-speed="1600"
+                              data-start="2800"
+                              data-easing="Power4.easeOut"
+                              data-endspeed="300"
+                              data-endeasing="Power1.easeIn"
+                              data-captionhidden="off"
+                              style="z-index: 6">
+                              <a href="#" class="btn-u btn-brd btn-brd-hover btn-u-light">Learn More</a>
+                              <a href="#" class="btn-u">Our Work </a>
+                              </div>
+
+        li.revolution-mch-1 data-transition="fade" data-slotamount="5" data-masterspeed="1000" data-title="Slide 2"
+          = image_tag('slider2/2.jpg', alt: '', data: { bgfit: 'cover', bgposition: 'center center', bgrepeat: 'no-repeat' })
+        li.revolution-mch-1 data-transition="fade" data-slotamount="5" data-masterspeed="1000" data-title="Slide 3"
+          = image_tag('slider2/3.jpg', alt: '', data: { bgfit: 'cover', bgposition: 'center center', bgrepeat: 'no-repeat' })
+        /li.revolution-mch-1 data-transition="fade" data-slotamount="5" data-masterspeed="1000" data-title="Slide 4"
+        /  = image_tag('slider2/4.jpg', alt: '', data: { bgfit: 'contain', bgposition: 'center center', bgrepeat: 'no-repeat' })
+        /li.revolution-mch-1 data-transition="fade" data-slotamount="5" data-masterspeed="1000" data-title="Slide 5"
+        /  = image_tag('slider2/5.jpg', alt: '', data: { bgfit: 'contain', bgposition: 'center center', bgrepeat: 'no-repeat' })
+        /li.revolution-mch-1 data-transition="fade" data-slotamount="5" data-masterspeed="1000" data-title="Slide 6"
+        /  = image_tag('slider2/6.jpg', alt: '', data: { bgfit: 'contain', bgposition: 'center center', bgrepeat: 'no-repeat' })
+
+
+/ Product Content
+.container
+  / Breadcrumbs
+  /.row
+  /.heading.heading-v1.margin-top-20.margin-bottom-20
+    h2 Сейчас на витрине
+    p Готовые букеты и композиции, которые можно приобрести прямо сейчас.
+
+  /.row
+    .col-md-6
+      ul.breadcrumb-v5
+        li
+          a href="/"
+            i.fa.fa-home
+        li.active Блоки
+
+  / === Illustration v1 ===
+  .row.margin-bottom-60.margin-top-20
+    /.col-md-6.md-margin-bottom-30
+      .overflow-h
+        = link_to('#', class: 'illustration-v1 illustration-img1') do
+          span.illustration-bg
+            span.illustration-ads.ad-details-v2
+              /span.item-time Spring 2014
+              span.item-name Эксклюзив
+
+          /.illustration-v1.illustration-img1
+            .illustration-bg
+              .illustration-ads.ad-details-v1
+                /h3.item-name Обучение
+                h3
+                  |ЭКСЛЮЗИВНЫЕ РАБОТЫ
+                  /strong
+                    |  SALE
+                  /|  30% - 60%
+                  /strong
+                    |  off
+                /a.btn-u.btn-brd.btn-brd-hover.btn-u-light href="#" Shop Now
+    .col-md-12
+      .overflow-h
+        = link_to('/obuchenie', class: 'illustration-v1 illustration-img2') do
+          span.illustration-bg
+            span.illustration-ads.ad-details-v2
+              span.item-time базовый курс
+              span.item-name «Профессиональная флористика»
+
+        /a.illustration-v1.illustration-img2 href="#"
+          span.illustration-bg
+            span.illustration-ads.ad-details-v2
+              /span.item-time Spring 2014
+              span.item-name Обучение
+  / === End Illustration v1 ===
+  / === Illustration v3 ===
+  /.row.margin-bottom-50
+    .col-md-4.md-margin-bottom-30
+      .overflow-h
+        a.illustration-v3.illustration-img1 href="#"
+          span.illustration-bg
+            span.illustration-ads
+              span.illustration-v3-category
+                span.product-category Men
+                span.product-amount 56 Items
+    .col-md-4.md-margin-bottom-30
+      .overflow-h
+        a.illustration-v3.illustration-img2 href="#"
+          span.illustration-bg
+            span.illustration-ads
+              span.illustration-v3-category
+                span.product-category Men
+                span.product-amount 56 Items
+    .col-md-4.md-margin-bottom-30
+      .overflow-h
+        a.illustration-v3.illustration-img3 href="#"
+          span.illustration-bg
+            span.illustration-ads
+              span.illustration-v3-category
+                span.product-category Men
+                span.product-amount 56 Items
+
+
+/.tp-banner-container
+  .tp-banner
+    ul
+      / SLIDE
+      li.revolution-mch-1 data-transition="fade" data-slotamount="5" data-masterspeed="1000" data-title="Slide 1"
+        / main image
+        = image_tag('slider/4.jpg', alt: '', data: { bgfit: "cover", bgposition: 'left top', bgrepeat: 'no-repeat' })
+      li.revolution-mch-1 data-transition="fade" data-slotamount="5" data-masterspeed="1000" data-title="Slide 2"
+        = image_tag('slider/2.jpg', alt: '', data: { bgfit: "cover", bgposition: 'left top', bgrepeat: 'no-repeat' })
+
+
+/erb:
+  <div class="tp-banner-container">
+			<div class="tp-banner">
+				<ul>
+					<!-- SLIDE -->
+					<li class="revolution-mch-1" data-transition="fade" data-slotamount="5" data-masterspeed="1000"		data-title="Slide 1">
+						<!-- MAIN IMAGE -->
+						<img src="assets/img/sliders/4.jpg"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+
+						<div class="tp-caption revolution-ch1 sft start"
+						data-x="center"
+						data-hoffset="0"
+						data-y="100"
+						data-speed="1500"
+						data-start="500"
+						data-easing="Back.easeInOut"
+						data-endeasing="Power1.easeIn"
+						data-endspeed="300">
+						Introducing Unify Template
+						</div>
+
+						<!-- LAYER -->
+						<div class="tp-caption revolution-ch2 sft"
+						data-x="center"
+						data-hoffset="0"
+						data-y="190"
+						data-speed="1400"
+						data-start="2000"
+						data-easing="Power4.easeOut"
+						data-endspeed="300"
+						data-endeasing="Power1.easeIn"
+						data-captionhidden="off"
+						style="z-index: 6">
+						We are creative technology company providing <br/>
+						key digital services on web and mobile.
+						</div>
+
+						<!-- LAYER -->
+						<div class="tp-caption sft"
+						data-x="center"
+						data-hoffset="0"
+						data-y="310"
+						data-speed="1600"
+						data-start="2800"
+						data-easing="Power4.easeOut"
+						data-endspeed="300"
+						data-endeasing="Power1.easeIn"
+						data-captionhidden="off"
+						style="z-index: 6">
+						<a href="#" class="btn-u btn-brd btn-brd-hover btn-u-light">Learn More</a>
+						<a href="#" class="btn-u">Our Work</a>
+						</div>
+					</li>
+					<!-- END SLIDE -->
+
+					<!-- SLIDE -->
+					<li class="revolution-mch-1" data-transition="fade" data-slotamount="5" data-masterspeed="1000" data-title="Slide 2">
+						<!-- MAIN IMAGE -->
+						<img src="assets/img/sliders/2.jpg"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+
+						<div class="tp-caption revolution-ch1 sft start"
+						data-x="center"
+						data-hoffset="0"
+						data-y="100"
+						data-speed="1500"
+						data-start="500"
+						data-easing="Back.easeInOut"
+						data-endeasing="Power1.easeIn"
+						data-endspeed="300">
+						Includes 300+ Template Pages
+						</div>
+
+						<!-- LAYER -->
+						<div class="tp-caption revolution-ch2 sft"
+						data-x="center"
+						data-hoffset="0"
+						data-y="190"
+						data-speed="1400"
+						data-start="2000"
+						data-easing="Power4.easeOut"
+						data-endspeed="300"
+						data-endeasing="Power1.easeIn"
+						data-captionhidden="off"
+						style="z-index: 6">
+						We are creative technology company providing <br/>
+						key digital services on web and mobile.
+						</div>
+
+						<!-- LAYER -->
+						<div class="tp-caption sft"
+						data-x="center"
+						data-hoffset="0"
+						data-y="310"
+						data-speed="1600"
+						data-start="2800"
+						data-easing="Power4.easeOut"
+						data-endspeed="300"
+						data-endeasing="Power1.easeIn"
+						data-captionhidden="off"
+						style="z-index: 6">
+						<a href="#" class="btn-u btn-brd btn-brd-hover btn-u-light">Learn More</a>
+						<a href="#" class="btn-u btn-brd btn-brd-hover btn-u-light">Our Work</a>
+						</div>
+					</li>
+					<!-- END SLIDE -->
+
+					<!-- SLIDE -->
+					<li class="revolution-mch-1" data-transition="fade" data-slotamount="5" data-masterspeed="1000" data-title="Slide 3">
+						<!-- MAIN IMAGE -->
+						<img src="assets/img/sliders/3.jpg"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+
+						<div class="tp-caption revolution-ch1 sft start"
+						data-x="center"
+						data-hoffset="0"
+						data-y="100"
+						data-speed="1500"
+						data-start="500"
+						data-easing="Back.easeInOut"
+						data-endeasing="Power1.easeIn"
+						data-endspeed="300">
+						Over 25000+ Satisfied Users
+						</div>
+
+						<!-- LAYER -->
+						<div class="tp-caption revolution-ch2 sft"
+						data-x="center"
+						data-hoffset="0"
+						data-y="190"
+						data-speed="1400"
+						data-start="2000"
+						data-easing="Power4.easeOut"
+						data-endspeed="300"
+						data-endeasing="Power1.easeIn"
+						data-captionhidden="off"
+						style="z-index: 6">
+						We are creative technology company providing <br/>
+						key digital services on web and mobile.
+						</div>
+
+						<!-- LAYER -->
+						<div class="tp-caption sft"
+						data-x="center"
+						data-hoffset="0"
+						data-y="310"
+						data-speed="1600"
+						data-start="2800"
+						data-easing="Power4.easeOut"
+						data-endspeed="300"
+						data-endeasing="Power1.easeIn"
+						data-captionhidden="off"
+						style="z-index: 6">
+						<a href="#" class="btn-u btn-brd btn-brd-hover btn-u-light">Learn More</a>
+						<a href="#" class="btn-u btn-brd btn-brd-hover btn-u-light">Our Work</a>
+						</div>
+					</li>
+					<!-- END SLIDE -->
+				</ul>
+				<div class="tp-bannertimer tp-bottom"></div>
+			</div>
+		</div>

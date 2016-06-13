@@ -97,17 +97,19 @@ namespace :deploy do
   desc 'generate passenger start|stop scripts'
   task :generate_passenger_scripts do
     on roles(:app) do
+      rvmsudo = fetch(:port) < 1024 ? 'rvmsudo' : '' # need root
+
       passenger_start = <<-EOF
 #!/bin/bash
 DIR="#{fetch(:deploy_to)}"
 export BUNDLE_GEMFILE="$DIR/current/Gemfile"
-cd $DIR && bundle exec passenger start current
+cd $DIR && #{rvmsudo} bundle exec passenger start current
       EOF
 
       passenger_stop = <<-EOF
 #!/bin/bash
 DIR="#{current_path}"
-cd $DIR && bundle exec passenger stop
+cd $DIR && #{rvmsudo} bundle exec passenger stop --pid-file "#{shared_path}/tmp/pids/passenger.#{fetch(:port)}.pid"
       EOF
 
       upload! StringIO.new(passenger_start), "#{fetch(:deploy_to)}/passenger_start.sh"
@@ -128,6 +130,8 @@ cd $DIR && bundle exec passenger stop
         pid_file:    "#{shared_path}/tmp/pids/passenger.#{port}.pid"
       }
 
+      config[:user] = fetch(:user) if port < 1024 # need root
+
       upload! StringIO.new(JSON.pretty_generate(config) << "\n"),  "#{current_path}/Passengerfile.json"
     end
   end
@@ -139,5 +143,44 @@ end
 # error_page 500 502 503 504 /500.html;
 # error_page 404 /404.html;
 
+# ######################################################################################################################
+# compile assets local with capistrano 3.2.1 and rails 4.1.1 (fully integrated)
+# https://gist.github.com/twetzel/66de336327f79beac0e0
+#
+# Clear existing task so we can replace it rather than "add" to it.
+Rake::Task["deploy:compile_assets"].clear
 
+namespace :deploy do
+
+  desc 'Compile assets'
+  task :compile_assets => [:set_rails_env] do
+    # invoke 'deploy:assets:precompile'
+    invoke 'deploy:assets:precompile_local'
+    invoke 'deploy:assets:backup_manifest'
+  end
+
+
+  namespace :assets do
+
+    desc "Precompile assets locally and then rsync to web servers"
+    task :precompile_local do
+      # compile assets locally
+      run_locally do
+        execute "RAILS_ENV=#{fetch(:stage)} bundle exec rake assets:precompile"
+      end
+
+      # rsync to each server
+      local_dir = "./public/assets/"
+      on roles( fetch(:assets_roles, [:web]) ) do
+        # this needs to be done outside run_locally in order for host to exist
+        remote_dir = "#{host.user}@#{host.hostname}:#{release_path}/public/assets/"
+
+        run_locally { execute "rsync -av --delete #{local_dir} #{remote_dir}" }
+      end
+
+      # clean up
+      run_locally { execute "rm -rf #{local_dir}" }
+    end
+  end
+end
 

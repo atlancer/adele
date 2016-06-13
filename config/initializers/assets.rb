@@ -19,4 +19,5 @@ Rails.application.assets.register_engine('.slim', Slim::Template)
 # for Haml
 # Rails.application.assets.register_engine('.haml', Tilt::HamlTemplate)
 
-Rails.application.config.assets.precompile += %w( owlcarousel/owl.video.play.png )
+# Rails.application.config.assets.precompile += %w( owlcarousel/owl.video.play.png )
+Rails.application.config.assets.precompile += %w( unify.js unify/lt_ie9.js )
