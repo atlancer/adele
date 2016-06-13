@@ -117,7 +117,7 @@ li:first-child {
     height: 100%;
     content: " ";
     position: absolute;
-    background: rgba(42,42,42,0.3);
+    background: rgba(42,42,42,0.1);
 }
 
 .illustration-v1:hover {
@@ -127,7 +127,7 @@ li:first-child {
 .illustration-v1 .illustration-bg {
     width: 100%;
     display: table;
-    min-height: 170px;
+    min-height: 220px;
     background-clip: padding-box;
 }
 
@@ -154,10 +154,10 @@ li:first-child {
 }
 
 .illustration-v1.illustration-img1:hover {
-	-transform: scale(1.05);
-	-o-transform: scale(1.05);
-	-moz-transform: scale(1.05);
-	-webkit-transform: scale(1.05);
+	-transform: scale(1.03);
+	-o-transform: scale(1.03);
+	-moz-transform: scale(1.03);
+	-webkit-transform: scale(1.03);
 }
 
 .illustration-v1 .ad-details-v1 h3 {
