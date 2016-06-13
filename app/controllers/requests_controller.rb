@@ -1,6 +1,6 @@
 class RequestsController < ApplicationController
   def create
-    Rails.logger.info params.inspect
+    Rails.logger.info "zayavka: #{params.inspect}"
 
     redirect_to '/zayavka_poluchena'
   end
