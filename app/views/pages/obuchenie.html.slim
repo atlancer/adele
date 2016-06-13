@@ -163,20 +163,23 @@
               /h4 Some Input
               = hidden_field_tag :authenticity_token, form_authenticity_token
               p
-                span Ваше имя и фамилия
+                span Ваше имя и фамилия *
                 input#name.form-control type="text" name='name'
               p
-                span Адрес электронной почты
+                span Адрес электронной почты *
                 input#email.form-control type="text" name='email'
               p
-                span Номер телефона
+                span.red Номер телефона *
                 input#phone.form-control type="text" name='phone'
-            /.col-md-6
-            /  h4 More Input
               p
-                input.form-control type="text"
+                |*
+                span.small
+                  | поля, помеченные звездочкой, обязательны для заполнения
+                br
+                span.small
+                  | Мы не передаем Ваши данные третьим лицам.
         .modal-footer
-          button#send.btn-u.btn-u-primary.btn-block type="submit"
+          button#send.btn-u.btn-u-lg.btn-block type="submit"
             |Отправить заявку
             i.fa.fa-paper-plane.margin-left-10
 
