@@ -5,9 +5,40 @@
 / курсы флористики, тренинг декор, тренинг флористики
 / флорист курсы флористики школа флористов санкт петербург спб
 
+
+.collection-banner
+  .container
+    .col-md-9.md-margin-bottom-50
+      h2 Курс «Профессиональная флористика»
+      p Откройте для себя удивительный мир растений и цветов !
+      h3 style="color:white" Группа "Вечерняя" с 28 ноября по 20 декабря
+      h3 style="color:white" Группа "Интенсив" с 5 по 11 декабря
+    .col-md-3
+      .overflow-h
+        .new-offers.shop-bg-green.rounded-x
+          span базовый курс
+
+/erb:
+  <div class="collection-banner">
+      <div class="container">
+        <div class="col-md-9 md-margin-bottom-50">
+          <h2>«Профессиональная флористика»</h2>
+          <h3 style="color:white">Группа "Вечерняя" с 28 ноября по 20 декабря</h3>
+          <h3 style="color:white">Группа "Интенсив" с 5 по 11 декабря</h3>
+        </div>
+        <div class="col-md-3">
+          <div class="overflow-h">
+            <div class="new-offers shop-bg-green rounded-x">
+              <span>базовый курс</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
 / Product Content
-.container
-  .breadcrumbs-v3.img-v1.margin-bottom-30
+.container.margin-top-20
+  /.breadcrumbs-v3.img-v1.margin-bottom-30
     .text-center.curs-head
       h1 «Профессиональная флористика»
       p Базовый курс
@@ -142,13 +173,50 @@
                 br
                 |Занятия в группе «Интенсив» проводятся с 11 июля по 16 июля.
 
-  .row.margin-bottom-50
+  /.row.margin-bottom-50
     .col-md-3
     .col-md-6#zbutton
       button.btn-u.btn-u-lg.btn-block.margin-bottom-30 data-toggle="modal"
-        i.fa.fa-bell-o
+        i.icon-check
         |&nbsp;&nbsp;Оставить заявку на обучение
     .col-md-3
+
+/.call-action-v1.call-action-v1-boxed.tag-box-v7.margin-bottom-40.bg-color-primary
+  .call-action-v1-box
+    .call-action-v1-in.text-center.yobject-marked
+      button.btn-u.btn-u-lg.btn-block.margin-bottom-30 data-toggle="modal"
+        i.icon-check
+        |&nbsp;&nbsp;Оставить заявку на обучение
+
+erb:
+  <div class="call-action-v1 call-action-v1-boxed tag-box-v7 margin-bottom-40 bg-color-primary">
+          <div class="call-action-v1-box">
+            <div class="call-action-v1-in text-center yobject-marked">
+              <a id="zbutton" href="#portfolio" class="btn-u btn-u-lg btn-brd rounded btn-brd-width-2 btn-brd-hover btn-u-light btn-u-block margin-bottom-20" data-toggle="modal">
+                <i class="icon-check"></i>
+                &nbsp;&nbsp;Отправьте заявку на обучение &nbsp;&nbsp;
+              </a>
+
+              <h4 class="color-darker">Или позвоните нам по телефону +7 (812) 992-51-70</h4>
+              </div>
+          </div>
+        </div>
+
+/erb:
+  <div class="call-action-v1 bg-color-primary margin-bottom-40">
+        <div class="container">
+          <div class="call-action-v1-box">
+            <div class="call-action-v1-in">
+              <h3 class="color-light">Contact us at support@htmlstream.com or give us a call +44 (35) 77 3892</h3>
+            </div>
+            <div class="call-action-v1-in inner-btn page-scroll">
+              <a href="#portfolio" class="btn-u btn-u-lg btn-brd btn-brd-width-2 btn-brd-hover btn-u-light btn-u-block">
+                Оставить заявку на обучение
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
 
 #responsive.modal.fade tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
   .modal-dialog

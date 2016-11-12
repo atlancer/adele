@@ -113,3 +113,8 @@
 .illustration-v1 .ad-details-v2 span.item-name {
     font-size: 40px;
 }
+
+.bg-color-primary {
+    /*background-color: #72c02c !important;*/
+    background-color: #18ba9b !important;
+}

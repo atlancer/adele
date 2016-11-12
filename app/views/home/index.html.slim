@@ -1,20 +1,62 @@
-.container.container-md
-  .row
-    .heading.heading-v1.margin-bottom-20
-      h2 Букеты
-      /p Lorem ipsum dolor sit
+.collection-banner
+  .container
+    .col-md-9.md-margin-bottom-50
+      h2 Курс «Профессиональная флористика»
+      p Откройте для себя удивительный мир растений и цветов !
+      h3 style="color:white" Группа "Вечерняя" с 28 ноября по 20 декабря
+      h3 style="color:white" Группа "Интенсив" с 5 по 11 декабря
+      a.btn-u.btn-u-lg.btn-brd.btn-brd-hover.btn-u-light.rounded href="/obuchenie" Ознакомиться с программой обучения и записаться на курсы
+    .col-md-3
+      .overflow-h
+        .new-offers.shop-bg-green.rounded-x
+          span базовый курс
+
+/erb:
+  <div class="collection-banner">
+      <div class="container">
+        <div class="col-md-9 md-margin-bottom-50">
+          <h2>Курс «Профессиональная флористика»</h2>
+          <p>Откройте для себя удивительный мир растений и цветов !</p><br>
+
+          <h3 style="color:white">Группа "Вечерняя" с 28 ноября по 20 декабря</h3>
+          <h3 style="color:white">Группа "Интенсив" с 5 по 11 декабря</h3>
+
+          <a href="#" class="btn-u btn-brd btn-brd-hover btn-u-light">Ознакомиться с программой обучения и записаться на курсы</a>
+        </div>
+        <div class="col-md-3">
+          <div class="overflow-h">
+
+            <div class="new-offers shop-bg-green rounded-x">
+              <span>базовый курс</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+.shop-subscribe.bg-color-blue.margin-bottom-20
+  .container
+    .row
+      .heading.heading-v4
+        h2 Букеты и композиции
+
+.container.container-md.margin-bottom-20
   erb:
     <div class="row illustration-v2">
                 <div class="col-md-3 col-sm-6 md-margin-bottom-30">
                     <div class="product-img">
                         <a href="shop-ui-inner.html"><img class="full-width img-responsive" src="assets/img/blog/dsc_0010.jpg" alt=""></a>
+                        <a class="product-review" href="shop-ui-inner.html">Купить в 1 клик</a>
+                        <div class="shop-rgba-red rgba-banner">Новинка</div>
                     </div>
                     <div class="product-description product-description-brd">
                         <div class="overflow-h margin-bottom-5">
                             <div class="pull-left">
-                                <h4 class="title-price"><a href="shop-ui-inner.html">Красные розы в коробке</a></h4>
-                                <span class="gender">Размер </span>
-                                <span class="title-price">2500 руб</span>
+                                <h4 class="title-price"><a href="shop-ui-inner.html">Красные розы и желтые каллы</a></h4>
+                            </div>
+                            <div class="product-price">
+                              <span class="title-price">2500 руб.</span>
+                              <button class="btn-u btn-u-red rounded" type="button">&nbsp;Купить</button>
                             </div>
                         </div>
                     </div>
@@ -22,87 +64,59 @@
                 <div class="col-md-3 col-sm-6 md-margin-bottom-30">
                     <div class="product-img">
                         <a href="shop-ui-inner.html"><img class="full-width img-responsive" src="assets/img/blog/dsc_0010.jpg" alt=""></a>
-                        <a class="product-review" href="shop-ui-inner.html">Quick review</a>
-                        <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                        <a class="product-review" href="shop-ui-inner.html">Купить в 1 клик</a>
                     </div>
                     <div class="product-description product-description-brd">
                         <div class="overflow-h margin-bottom-5">
                             <div class="pull-left">
-                                <h4 class="title-price"><a href="shop-ui-inner.html">Double-breasted</a></h4>
-                                <span class="gender text-uppercase">Men</span>
-                                <span class="gender">Suits - Blazers</span>
+                                <h4 class="title-price"><a href="shop-ui-inner.html">Красные розы</a></h4>
                             </div>
                             <div class="product-price">
-                                <span class="title-price">$60.00</span>
-                                <span class="title-price line-through">$95.00</span>
+                              <span class="title-price">2500 руб.</span>
+                              <button class="btn-u btn-u-red rounded" type="button">&nbsp;Купить</button>
                             </div>
                         </div>
-                        <ul class="list-inline product-ratings">
-                            <li><i class="rating-selected fa fa-star"></i></li>
-                            <li><i class="rating-selected fa fa-star"></i></li>
-                            <li><i class="rating-selected fa fa-star"></i></li>
-                            <li><i class="rating fa fa-star"></i></li>
-                            <li><i class="rating fa fa-star"></i></li>
-                            <li class="like-icon"><a data-original-title="Add to wishlist" data-toggle="tooltip" data-placement="left" class="tooltips" href="#"><i class="fa fa-heart"></i></a></li>
-                        </ul>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 md-margin-bottom-30">
                     <div class="product-img">
                         <a href="shop-ui-inner.html"><img class="full-width img-responsive" src="assets/img/blog/dsc_0010.jpg" alt=""></a>
-                        <a class="product-review" href="shop-ui-inner.html">Quick review</a>
-                        <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                        <div class="shop-rgba-red rgba-banner">Out of stock</div>
+                        <a class="product-review" href="shop-ui-inner.html">Купить в 1 клик</a>
                     </div>
                     <div class="product-description product-description-brd">
                         <div class="overflow-h margin-bottom-5">
                             <div class="pull-left">
-                                <h4 class="title-price"><a href="shop-ui-inner.html">Double-breasted</a></h4>
-                                <span class="gender text-uppercase">Women</span>
-                                <span class="gender">Suits - Blazers</span>
+                                <h4 class="title-price"><a href="shop-ui-inner.html">Букет из цветов</a></h4>
                             </div>
                             <div class="product-price">
-                                <span class="title-price">$95.00</span>
+                              <span class="title-price">1800 руб.</span>
+                              <button class="btn-u btn-u-red rounded" type="button">&nbsp;Купить</button>
                             </div>
                         </div>
-                        <ul class="list-inline product-ratings">
-                            <li><i class="rating-selected fa fa-star"></i></li>
-                            <li><i class="rating-selected fa fa-star"></i></li>
-                            <li><i class="rating-selected fa fa-star"></i></li>
-                            <li><i class="rating fa fa-star"></i></li>
-                            <li><i class="rating fa fa-star"></i></li>
-                            <li class="like-icon"><a data-original-title="Add to wishlist" data-toggle="tooltip" data-placement="left" class="tooltips" href="#"><i class="fa fa-heart"></i></a></li>
-                        </ul>
                     </div>
                 </div>
+
                 <div class="col-md-3 col-sm-6 md-margin-bottom-30">
                     <div class="product-img">
                         <a href="shop-ui-inner.html"><img class="full-width img-responsive" src="assets/img/blog/dsc_0010.jpg" alt=""></a>
-                        <a class="product-review" href="shop-ui-inner.html">Quick review</a>
-                        <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                        <div class="shop-rgba-dark-green rgba-banner">New</div>
+                        <a class="product-review" href="shop-ui-inner.html">Купить в 1 клик</a>
+                        <div class="shop-rgba-red rgba-banner">Ваза с водой в подарок</div>
                     </div>
                     <div class="product-description product-description-brd">
                         <div class="overflow-h margin-bottom-5">
                             <div class="pull-left">
-                                <h4 class="title-price"><a href="shop-ui-inner.html">Double-breasted</a></h4>
-                                <span class="gender text-uppercase">Men</span>
-                                <span class="gender">Suits - Blazers</span>
+                                <h4 class="title-price"><a href="shop-ui-inner.html">Букет из цветов в вазе с водой</a></h4>
                             </div>
                             <div class="product-price">
-                                <span class="title-price">$95.00</span>
+                              <span class="title-price">1800 руб.</span>
+                              <button class="btn-u btn-u-red rounded" type="button">&nbsp;Купить</button>
                             </div>
                         </div>
-                        <ul class="list-inline product-ratings">
-                            <li><i class="rating-selected fa fa-star"></i></li>
-                            <li><i class="rating-selected fa fa-star"></i></li>
-                            <li><i class="rating-selected fa fa-star"></i></li>
-                            <li><i class="rating fa fa-star"></i></li>
-                            <li><i class="rating fa fa-star"></i></li>
-                            <li class="like-icon"><a data-original-title="Add to wishlist" data-toggle="tooltip" data-placement="left" class="tooltips" href="#"><i class="fa fa-heart"></i></a></li>
-                        </ul>
                     </div>
                 </div>
+
+
+
             </div>
     <div class="row illustration-v2">
                 <div class="col-md-3 col-sm-6 md-margin-bottom-30">
@@ -205,133 +219,55 @@
                 </div>
             </div>
 
-.container.container-md
-  .row
-    .heading.heading-v1.margin-bottom-20
-      h2 Композиции
+  /erb:
+    <button class="btn-u btn-u-lg btn-block btn-u-blue rounded" type="button">ЗАКАЗАТЬ БУКЕТ ИЛИ КОМПОЗИЦИЮ</button>
+
+
   erb:
-    <div class="row illustration-v2">
-                <div class="col-md-3 col-sm-6 md-margin-bottom-30">
-                    <div class="product-img">
-                        <a href="shop-ui-inner.html"><img class="full-width img-responsive" src="assets/img/blog/25.jpg" alt=""></a>
-                        <a class="product-review" href="shop-ui-inner.html">Quick review</a>
-                        <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                    </div>
-                    <div class="product-description product-description-brd">
-                        <div class="overflow-h margin-bottom-5">
-                            <div class="pull-left">
-                                <h4 class="title-price"><a href="shop-ui-inner.html">Double-breasted</a></h4>
-                                <span class="gender text-uppercase">Woman</span>
-                                <span class="gender">Suits - Blazers</span>
-                            </div>
-                            <div class="product-price">
-                                <span class="title-price">$95.00</span>
-                            </div>
-                        </div>
-                        <ul class="list-inline product-ratings">
-                            <li><i class="rating-selected fa fa-star"></i></li>
-                            <li><i class="rating-selected fa fa-star"></i></li>
-                            <li><i class="rating-selected fa fa-star"></i></li>
-                            <li><i class="rating fa fa-star"></i></li>
-                            <li><i class="rating fa fa-star"></i></li>
-                            <li class="like-icon"><a data-original-title="Add to wishlist" data-toggle="tooltip" data-placement="left" class="tooltips" href="#"><i class="fa fa-heart"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 md-margin-bottom-30">
-                    <div class="product-img">
-                        <a href="shop-ui-inner.html"><img class="full-width img-responsive" src="assets/img/blog/09.jpg" alt=""></a>
-                        <a class="product-review" href="shop-ui-inner.html">Quick review</a>
-                        <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                    </div>
-                    <div class="product-description product-description-brd">
-                        <div class="overflow-h margin-bottom-5">
-                            <div class="pull-left">
-                                <h4 class="title-price"><a href="shop-ui-inner.html">Double-breasted</a></h4>
-                                <span class="gender text-uppercase">Men</span>
-                                <span class="gender">Suits - Blazers</span>
-                            </div>
-                            <div class="product-price">
-                                <span class="title-price">$60.00</span>
-                                <span class="title-price line-through">$95.00</span>
-                            </div>
-                        </div>
-                        <ul class="list-inline product-ratings">
-                            <li><i class="rating-selected fa fa-star"></i></li>
-                            <li><i class="rating-selected fa fa-star"></i></li>
-                            <li><i class="rating-selected fa fa-star"></i></li>
-                            <li><i class="rating fa fa-star"></i></li>
-                            <li><i class="rating fa fa-star"></i></li>
-                            <li class="like-icon"><a data-original-title="Add to wishlist" data-toggle="tooltip" data-placement="left" class="tooltips" href="#"><i class="fa fa-heart"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 md-margin-bottom-30">
-                    <div class="product-img">
-                        <a href="shop-ui-inner.html"><img class="full-width img-responsive" src="assets/img/blog/10.jpg" alt=""></a>
-                        <a class="product-review" href="shop-ui-inner.html">Quick review</a>
-                        <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                        <div class="shop-rgba-red rgba-banner">Out of stock</div>
-                    </div>
-                    <div class="product-description product-description-brd">
-                        <div class="overflow-h margin-bottom-5">
-                            <div class="pull-left">
-                                <h4 class="title-price"><a href="shop-ui-inner.html">Double-breasted</a></h4>
-                                <span class="gender text-uppercase">Women</span>
-                                <span class="gender">Suits - Blazers</span>
-                            </div>
-                            <div class="product-price">
-                                <span class="title-price">$95.00</span>
-                            </div>
-                        </div>
-                        <ul class="list-inline product-ratings">
-                            <li><i class="rating-selected fa fa-star"></i></li>
-                            <li><i class="rating-selected fa fa-star"></i></li>
-                            <li><i class="rating-selected fa fa-star"></i></li>
-                            <li><i class="rating fa fa-star"></i></li>
-                            <li><i class="rating fa fa-star"></i></li>
-                            <li class="like-icon"><a data-original-title="Add to wishlist" data-toggle="tooltip" data-placement="left" class="tooltips" href="#"><i class="fa fa-heart"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 md-margin-bottom-30">
-                    <div class="product-img">
-                        <a href="shop-ui-inner.html"><img class="full-width img-responsive" src="assets/img/blog/11.jpg" alt=""></a>
-                        <a class="product-review" href="shop-ui-inner.html">Quick review</a>
-                        <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                        <div class="shop-rgba-dark-green rgba-banner">New</div>
-                    </div>
-                    <div class="product-description product-description-brd">
-                        <div class="overflow-h margin-bottom-5">
-                            <div class="pull-left">
-                                <h4 class="title-price"><a href="shop-ui-inner.html">Double-breasted</a></h4>
-                                <span class="gender text-uppercase">Men</span>
-                                <span class="gender">Suits - Blazers</span>
-                            </div>
-                            <div class="product-price">
-                                <span class="title-price">$95.00</span>
-                            </div>
-                        </div>
-                        <ul class="list-inline product-ratings">
-                            <li><i class="rating-selected fa fa-star"></i></li>
-                            <li><i class="rating-selected fa fa-star"></i></li>
-                            <li><i class="rating-selected fa fa-star"></i></li>
-                            <li><i class="rating fa fa-star"></i></li>
-                            <li><i class="rating fa fa-star"></i></li>
-                            <li class="like-icon"><a data-original-title="Add to wishlist" data-toggle="tooltip" data-placement="left" class="tooltips" href="#"><i class="fa fa-heart"></i></a></li>
-                        </ul>
-                    </div>
+    <div class="call-action-v1 call-action-v1-boxed bg-color-blue">
+            <div class="call-action-v1-box">
+              <div class="call-action-v1-in text-center yobject-marked">
+                <a id="zbutton" href="#portfolio" class="btn-u btn-u-lg btn-brd rounded btn-brd-width-2 btn-brd-hover btn-u-light btn-u-block margin-bottom-10" data-toggle="modal">
+                  <i class="icon-check"></i>
+                  &nbsp;&nbsp;Закажите свой букет &nbsp;&nbsp;
+                </a>
+                  <h4 class="color-darker">Или позвоните нам по телефону +7 (812) 992-51-70</h4>
                 </div>
             </div>
-.container.container-md
-  .row
-    .heading.heading-v1.margin-bottom-20
-      h2 Подарки
+          </div>
+
+
+/erb:
+  <div class="shop-subscribe bg-color-red margin-bottom-40">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 md-margin-bottom-20">
+              <h2>subscribe to our weekly <strong>newsletter</strong></h2>
+            </div>
+            <div class="col-md-4">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Email your email...">
+                <span class="input-group-btn">
+                  <button class="btn" type="button"><i class="fa fa-envelope-o"></i></button>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div><!--/end container-->
+      </div>
+
+.shop-subscribe.bg-color-red.margin-bottom-20
+  .container
+    .row
+      .heading.heading-v4
+        h2 Подарки ручной работы
+
+.container.container-md.margin-bottom-20
   erb:
     <div class="row illustration-v2">
                 <div class="col-md-3 col-sm-6 md-margin-bottom-30">
                     <div class="product-img">
-                        <a href="shop-ui-inner.html"><img class="full-width img-responsive" src="assets/img/blog/25.jpg" alt=""></a>
+                        <a href="shop-ui-inner.html"><img class="full-width img-responsive" src="p1.jpg" alt=""></a>
                         <a class="product-review" href="shop-ui-inner.html">Quick review</a>
                         <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                     </div>
@@ -346,14 +282,6 @@
                                 <span class="title-price">$95.00</span>
                             </div>
                         </div>
-                        <ul class="list-inline product-ratings">
-                            <li><i class="rating-selected fa fa-star"></i></li>
-                            <li><i class="rating-selected fa fa-star"></i></li>
-                            <li><i class="rating-selected fa fa-star"></i></li>
-                            <li><i class="rating fa fa-star"></i></li>
-                            <li><i class="rating fa fa-star"></i></li>
-                            <li class="like-icon"><a data-original-title="Add to wishlist" data-toggle="tooltip" data-placement="left" class="tooltips" href="#"><i class="fa fa-heart"></i></a></li>
-                        </ul>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 md-margin-bottom-30">
@@ -442,7 +370,19 @@
                 </div>
             </div>
 
-      /p Lorem ipsum dolor sit
+
+  erb:
+    <div class="call-action-v1 call-action-v1-boxed margin-bottom-20 bg-color-red">
+            <div class="call-action-v1-box">
+              <div class="call-action-v1-in text-center yobject-marked">
+                <a id="zbutton" href="#portfolio" class="btn-u btn-u-lg btn-brd rounded btn-brd-width-2 btn-brd-hover btn-u-light btn-u-block" data-toggle="modal">
+                  <i class="icon-check"></i>
+                  &nbsp;&nbsp;Смотреть все подарки &nbsp;&nbsp;
+                </a>
+                </div>
+            </div>
+          </div>
+
 /<div class="heading heading-v1 margin-bottom-20">
 /  <h2>Featured products</h2>
 /  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed odio elit, ultrices vel cursus sed, placerat ut leo. Phasellus in magna erat. Etiam gravida convallis augue non tincidunt. Nunc lobortis dapibus neque quis lacinia. Nam dapibus tellus sit amet odio venenatis</p>
@@ -528,7 +468,7 @@
         li.active Блоки
 
   / === Illustration v1 ===
-  .row.margin-bottom-60.margin-top-20
+  /.row.margin-bottom-60.margin-top-20
     /.col-md-6.md-margin-bottom-30
       .overflow-h
         = link_to('#', class: 'illustration-v1 illustration-img1') do
