@@ -27,6 +27,7 @@
 //= require unify/js/plugins/revolution-slider
 //= require unify/js/plugins/fancy-box
 //= require jquery.lazyload
+//= require freewall
 
 
 //<!-- JS Global Compulsory -->

@@ -1,46 +1,78 @@
-.collection-banner
-  .container
-    .col-md-9.md-margin-bottom-50
-      h2 Курс «Профессиональная флористика»
-      p Откройте для себя удивительный мир растений и цветов !
-      h3 style="color:white" Группа "Вечерняя" с 28 ноября по 20 декабря
-      h3 style="color:white" Группа "Интенсив" с 5 по 11 декабря
-      a.btn-u.btn-u-lg.btn-brd.btn-brd-hover.btn-u-light.rounded href="/obuchenie" Ознакомиться с программой обучения и записаться на курсы
-    .col-md-3
-      .overflow-h
-        .new-offers.shop-bg-green.rounded-x
-          span базовый курс
+.container.margin-top-20.margin-bottom-20
+  .collection-banner
+    .container
+      .col-md-9.md-margin-bottom-50
+        h3 style="color:white" Откройте для себя удивительный мир флористики !
+        h2 style="margin-bottom: 10px" Курс «Профессиональная флористика»
+        h3 style="color:white" Группа "Интенсив" с 5 по 11 декабря
+        h3 style="color:white" Группа "Вечерняя" с 28 ноября по 20 декабря
+        a.btn-u.btn-u-lg.btn-brd.btn-obuchenie.rounded href="/obuchenie" Ознакомиться с программой обучения
+      .col-md-3
+        .overflow-h
+          .new-offers.shop-bg-blue.rounded-x
+            span базовый курс
 
-/erb:
-  <div class="collection-banner">
-      <div class="container">
-        <div class="col-md-9 md-margin-bottom-50">
-          <h2>Курс «Профессиональная флористика»</h2>
-          <p>Откройте для себя удивительный мир растений и цветов !</p><br>
+.container.margin-top-20.margin-bottom-20
+  .master-banner
+    .container
+      .col-md-9.md-margin-bottom-50
+        h3 style="color:white" Увлекательный цикл новогодних мастер-классов !
+        h2 style="margin-bottom: 10px;" Новогодние мастер-классы
+        h3 style="color:white" C 1 декабря по 25 декабря
+        a.btn-u.btn-u-lg.btn-brd.btn-obuchenie.rounded href="/novogodnij_master_klass" Выбрать мастер-класс
 
-          <h3 style="color:white">Группа "Вечерняя" с 28 ноября по 20 декабря</h3>
-          <h3 style="color:white">Группа "Интенсив" с 5 по 11 декабря</h3>
+/.container
+  erb:
+    <div class="row margin-bottom-50">
+            <div class="col-md-4 md-margin-bottom-30">
+                <div class="overflow-h">
+                    <a class="illustration-v3 illustration-img1" href="/bukety_i_kompozicii">
+                        <span class="illustration-bg">
+                            <span class="illustration-ads">
+                                <span class="illustration-v3-category">
+                                    <span class="product-category-2">Букеты и композиции</span>
 
-          <a href="#" class="btn-u btn-brd btn-brd-hover btn-u-light">Ознакомиться с программой обучения и записаться на курсы</a>
-        </div>
-        <div class="col-md-3">
-          <div class="overflow-h">
-
-            <div class="new-offers shop-bg-green rounded-x">
-              <span>базовый курс</span>
+                                </span>
+                            </span>
+                        </span>
+                    </a>
+                </div>
             </div>
-          </div>
+            <div class="col-md-4 md-margin-bottom-30">
+                <div class="overflow-h">
+                    <a class="illustration-v3 illustration-img2" href="#">
+                        <span class="illustration-bg">
+                            <span class="illustration-ads">
+                                <span class="illustration-v3-category">
+                                    <span class="product-category-2">Новый год</span>
+                                </span>
+                            </span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="overflow-h">
+                    <a class="illustration-v3 illustration-img3" href="#">
+                        <span class="illustration-bg">
+                            <span class="illustration-ads">
+                                <span class="illustration-v3-category">
+                                    <span class="product-category-2">Свадьба</span>
+                                </span>
+                            </span>
+                        </span>
+                    </a>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
 
-.shop-subscribe.bg-color-blue.margin-bottom-20
+/.shop-subscribe.bg-color-blue.margin-bottom-20
   .container
     .row
       .heading.heading-v4
         h2 Букеты и композиции
 
-.container.container-md.margin-bottom-20
+/.container.container-md.margin-bottom-20
   erb:
     <div class="row illustration-v2">
                 <div class="col-md-3 col-sm-6 md-margin-bottom-30">
@@ -237,32 +269,15 @@
           </div>
 
 
-/erb:
-  <div class="shop-subscribe bg-color-red margin-bottom-40">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-8 md-margin-bottom-20">
-              <h2>subscribe to our weekly <strong>newsletter</strong></h2>
-            </div>
-            <div class="col-md-4">
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="Email your email...">
-                <span class="input-group-btn">
-                  <button class="btn" type="button"><i class="fa fa-envelope-o"></i></button>
-                </span>
-              </div>
-            </div>
-          </div>
-        </div><!--/end container-->
-      </div>
+/ ------------------------------------------------------------------------------------------------------------
 
-.shop-subscribe.bg-color-red.margin-bottom-20
+/.shop-subscribe.bg-color-red.margin-bottom-20
   .container
     .row
       .heading.heading-v4
         h2 Подарки ручной работы
 
-.container.container-md.margin-bottom-20
+/.container.container-md.margin-bottom-20
   erb:
     <div class="row illustration-v2">
                 <div class="col-md-3 col-sm-6 md-margin-bottom-30">

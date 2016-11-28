@@ -1,0 +1,35 @@
+- content_for :title, ''
+- content_for :keywords, ''
+- content_for :description, ''
+/++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.container.margin-top-20
+  .row
+    #freewall.free-wall
+      .cell style="width:338px; height: 216px; background-image: url(p2.jpg)"
+      .cell style="width:338px; height: 216px; background-image: url(p2.jpg)"
+      .cell style="width:338px; height: 216px; background-image: url(p2.jpg)"
+      .cell style="width:338px; height: 216px; background-image: url(p2.jpg)"
+      .cell style="width:338px; height: 216px; background-image: url(p2.jpg)"
+      .cell style="width:338px; height: 216px; background-image: url(p2.jpg)"
+      .cell style="width:338px; height: 216px; background-image: url(p2.jpg)"
+      .cell style="width:338px; height: 216px; background-image: url(p2.jpg)"
+      .cell style="width:338px; height: 216px; background-image: url(p2.jpg)"
+    /erb:
+      <div id="freewall" class="free-wall"></div>
+
+javascript:
+  var temp = "<div class='cell' style='width:{width}px; height: {height}px; background-image: url(p2.jpg)'></div>";
+		var wall = new Freewall("#freewall");
+		wall.reset({
+			selector: '.cell',
+			animate: true,
+
+
+			onResize: function() {
+				wall.fitWidth();
+			}
+		});
+		wall.fitWidth();
+		// for scroll bar appear;
+		$(window).trigger("resize");

@@ -6,7 +6,21 @@
 / флорист курсы флористики школа флористов санкт петербург спб
 
 
-.collection-banner
+.collection-banner.margin-bottom-20
+  .container
+    .col-md-9.md-margin-bottom-50
+      h3 style="color:white" Откройте для себя удивительный мир флористики !
+      h2 style="margin-bottom: 10px" Курс «Профессиональная флористика»
+      h3 style="color:white" Группа "Интенсив" с 5 по 11 декабря
+      h3 style="color:white" Группа "Вечерняя" с 28 ноября по 20 декабря
+      /a.btn-u.btn-u-lg.btn-brd.btn-obuchenie.rounded href="/obuchenie" Ознакомиться с программой обучения
+    .col-md-3
+      .overflow-h
+        .new-offers.shop-bg-green.rounded-x
+          span базовый курс
+
+
+/.collection-banner
   .container
     .col-md-9.md-margin-bottom-50
       h2 Курс «Профессиональная флористика»
@@ -84,6 +98,12 @@
 
   .row
     .col-md-12
+      h3.heading.margin-bottom-5 ПРОГРАММА ОБУЧЕНИЯ
+      /erb:
+        <div class="heading heading-v4">
+                  <h2 class="heading-v4-m">ПРОГРАММА ОБУЧЕНИЯ</h2>
+              </div>
+
       .news-v3.bg-color-white
         .news-v3-in.margin-bottom-5
           /h2.heading Профессиональная флористика - Базовый курс
@@ -95,7 +115,7 @@
           /h3  Программа обучения
           /p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec arcu ipsum. Curabitur tincidunt nisi ex, ut eleifend turpis egestas vitae. Proin convallis et eros eget rutrum. Duis luctus lorem id mattis placerat. Etiam pharetra libero ut suscipit mollis. Morbi augue mi, maximus at lectus id, mollis ornare dui. Curabitur consequat, est non cursus suscipit, quam nulla porta enim, sed pharetra diam elit non nisi. Praesent pulvinar ante eu euismod cursus. Fusce quis est justo. Nullam id egestas diam. Etiam ac augue orci. Aliquam scelerisque convallis est sed pretium. In vel elementum lorem.
           .tag-box.tag-box-v2.margin-bottom-40
-            h3.heading.margin-bottom-25 ПРОГРАММА ОБУЧЕНИЯ
+            /h3.heading.margin-bottom-25 ПРОГРАММА ОБУЧЕНИЯ
             h4
               span.dropcap-bg 1 День
             p  Вводная часть. Ознакомление с ассортиментом срезанных цветов и понятием студийной флористики. Заказ цветов, технология первичной обработки растения, сохранность и продление жизни. Цветы по форме их значимости. Флористический инструмент, материалы и декор в работе флориста. Различные техники изготовления букетов, спиральная техника. Практическая часть. Первичная обработка растения, работа с флористическим инструментом. Составление букета по спиральной технике.
@@ -120,13 +140,15 @@
           /.tag-box.tag-box-v3.margin-bottom-40
           h3.heading.margin-bottom-30 ФОРМА ОБУЧЕНИЯ
           .row.service-box-v1.margin-bottom-30
+            .col-md-2.col-sm-3.md-margin-bottom-40
             .col-md-4.col-sm-6.md-margin-bottom-40
               .service-block-v1.service-block-default.no-margin-bottom
                 span.service-heading «Интенсив»
                 hr
                 ul.list-unstyled
+                  li с 5 декабря</br>по 11 декабря
                   li 6 дней
-                  li Пн-Сб
+                  li понедельник - суббота
                   li
                     |с 10:00 до 18:00
                     /br
@@ -136,13 +158,16 @@
                 span.service-heading «Вечерняя»
                 hr
                 ul.list-unstyled
+                  li с 28 ноября</br>по 20 декабря
                   li 16 дней
-                  li Пн-Пт
+                  li понедельник - пятница
                   li
                     |с 19:00 до 21:30
                     /br
                     /|2.5 часа в день
-            .col-md-4.col-sm-12
+            .col-md-2.col-sm-3.md-margin-bottom-40
+
+            /.col-md-4.col-sm-12
               .service-block-v1.service-block-default.no-margin-bottom
                 span.service-heading «Выходного дня»
                 hr
@@ -166,7 +191,7 @@
                 br
                   b.text-uppercase
                     |По окончании курса выдается сертификат !
-          .row
+          /.row
             .col-md-12
               .font-bold.text-center.text-uppercase.margin-bottom-5
                 |Занятия в группе «Вечерняя» проводятся с 04 июля по 23 июля.
@@ -194,10 +219,11 @@ erb:
             <div class="call-action-v1-in text-center yobject-marked">
               <a id="zbutton" href="#portfolio" class="btn-u btn-u-lg btn-brd rounded btn-brd-width-2 btn-brd-hover btn-u-light btn-u-block margin-bottom-20" data-toggle="modal">
                 <i class="icon-check"></i>
-                &nbsp;&nbsp;Отправьте заявку на обучение &nbsp;&nbsp;
+                &nbsp;&nbsp;Отправить заявку на обучение &nbsp;&nbsp;
               </a>
 
-              <h4 class="color-darker">Или позвоните нам по телефону +7 (812) 992-51-70</h4>
+              <h4 class="color-darker">Есть вопросы ?</h4>
+              <h4 class="color-darker">Повоните нам по телефону +7 (812) 992-51-70</h4>
               </div>
           </div>
         </div>
@@ -224,27 +250,28 @@ erb:
       = form_tag('/obuchenie', method: :post) do
         .modal-header
           button.close type="button" data-dismiss="modal" aria-hidden="true" &times;
-          h4#myModalLabel4.modal-title Заявка на обучение
+          h3#myModalLabel4.modal-title Заявка на обучение
+          p мы свяжемся с Вами в ближайшее время
         .modal-body
           .row
             .col-md-12
               /h4 Some Input
               = hidden_field_tag :authenticity_token, form_authenticity_token
               p
-                span Ваше имя и фамилия *
+                span Ваше имя *
                 input#name.form-control type="text" name='name'
               p
-                span Адрес электронной почты *
+                span Ваш адрес электронной почты *
                 input#email.form-control type="text" name='email'
               p
-                span.red Номер телефона *
+                span.red Ваш номер телефона *
                 input#phone.form-control type="text" name='phone'
               p
                 |*
                 span.small
                   | поля, помеченные звездочкой, обязательны для заполнения
-                br
-                span.small
+                /br
+                /span.small
                   | Мы не передаем Ваши данные третьим лицам.
         .modal-footer
           button#send.btn-u.btn-u-lg.btn-block type="submit"

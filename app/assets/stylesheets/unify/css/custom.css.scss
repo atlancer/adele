@@ -1,0 +1,238 @@
+/* Add here all your css styles (customizations) */
+.sidebar-nav-v1 {
+    /*TODO test with mobile*/
+    /*position: fixed;*/
+    /*width: 260px;*/
+    /*top: 127px;*/
+}
+.sidebar-nav-v1 > li.active,
+.sidebar-nav-v1 > li.active:hover {
+  background: #18ba9b;
+}
+
+.sidebar-nav-v1 li a {
+    color: #687074;
+}
+
+.sidebar-nav-v1 li.active a:hover {
+    color: #fff;
+}
+
+.sidebar-nav-v1 li a:hover {
+    color: #18ba9b;
+}
+
+.portfolio{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.contacts {
+    font-size: large;
+}
+
+.fancybox-overlay {
+    z-index: 10100;
+}
+
+.fancybox-wrap{
+    z-index: 10200;
+}
+
+.fancybox-opened {
+    z-index: 10300;
+}
+
+.dropcap-bg {
+    font-size: 30px;
+    padding: 7px;
+}
+
+.service-block-v1 {
+    margin-top: 0px;
+    padding: 15px;
+
+    background: #4765a0;
+    color: #fff;
+}
+.service-block-v1 .service-heading {
+    font-size: 28px;
+}
+
+/*.breadcrumbs-v3.img-v1 {*/
+  /*background: none repeat scroll 0 0 #18ba9b;*/
+  /*/!*background-size: cover;*!/*/
+  /*/!*background-position: center center;*!/*/
+/*}*/
+
+.curs-head {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /*background: rgba(255, 255, 255, 0.5);*/
+    /*background: rgba(78, 0, 11, 0.5);*/
+    background: rgba(114, 192, 44, 0.7);
+}
+
+.curs-head h1{
+    /*color: #4e000b;*/
+    /*color: #72c02c;*/
+    color: #fff;
+}
+.curs-head p{
+    /*color: #4e000b;*/
+    /*color: #72c02c;*/
+    color: #fff;
+    font-weight: 500;
+}
+
+.modal {
+    z-index: 10100;
+}
+
+.modal-backdrop {
+    z-index: 10090;
+}
+
+.navbar-phone {
+    margin-left: 0px !important;
+    padding: 20px 15px 25px 10px !important;
+    font-size: 25px !important;
+    line-height: 16px;
+}
+
+.addr-small {
+    font-size: 14px !important;
+    /*letter-spacing: 0px;*/
+}
+
+.footer-v2 .footer {
+    /*background: none repeat scroll 0 0 #f7f7f7;*/
+    /*border-top: 3px solid #eee;*/
+    padding: 40px 0 20px 0;
+}
+
+.margin-top-50 { margin-top: 50px;}
+
+.illustration-v1 .ad-details-v2 span.item-name {
+    font-size: 40px;
+}
+
+.bg-color-primary {
+    /*background-color: #72c02c !important;*/
+    background-color: #18ba9b !important;
+}
+
+/* -------------------------- */
+
+.btn-obuchenie {
+  color: #fff !important;
+  border-color: #fff !important;
+    /*background: none !important;*/
+
+    //border-color: #18ba9b !important;
+    background: #4765a0 !important;
+}
+
+.btn-obuchenie:hover {
+  color: #4765a0 !important;
+  border-color: #fff !important;
+    /*background: none !important;*/
+
+    //border-color: #18ba9b !important;
+    background: #fff !important;
+}
+
+/* --- header customization --- */
+
+.topbar-v3 {
+    padding: 2px 0;
+}
+
+.topbar-v3 .right-topbar li,
+.topbar-v3 .right-topbar li a {
+	font-size: 16px;
+}
+
+.topbar-v3 ul.left-topbar > li > a {
+	font-size: 16px;
+}
+
+.header-fixed .header-v5.header-fixed-shrink {
+    margin-top: -32.5px;
+}
+
+ /* -------------------------- */
+
+.illustration-v3 .illustration-v3-category {
+top: 0;
+left: 0;
+right: 0;
+z-index: 1;
+display: block;
+position: relative;
+border-top: 3px solid rgba(245, 245, 245, 0.5);
+border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+}
+
+.illustration-v3 span.product-category-2 {
+	color: #fff;
+	display: block;
+	font-size: 25px;
+	/*font-weight: 600;*/
+	/*line-height: 50px;*/
+	/*letter-spacing: 12px;*/
+	text-transform: uppercase;
+}
+
+
+.service-box-v1 li {
+margin: 8px 0;
+font-size: 20px;
+    color: #fff;
+padding-top: 8px;
+border-top: dotted 1px #fff;
+}
+
+.service-box-v1 li:hover {
+    color: #fff;
+}
+
+/*.btn-u-lg, a.btn-u-lg {*/
+/*font-size: 22px;*/
+/*}*/
+
+.heading-v4-m {
+    font-size: 20px !important;
+    margin-bottom: 0px !important;
+}
+
+.btn-u.btn-brd {
+background: #4765a0;
+}
+
+@media (max-width: 514px) {
+    .collection-banner h3 {
+         font-size: 20px;
+    }
+}
+
+.master-banner {
+  padding: 50px 0;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: asset_url('master_tree2.jpg');
+}
+
+.master-banner h2 {
+  color: #fff;
+  font-size: 36px;
+  line-height: 40px;
+  margin: 12px 0 15px;
+  text-transform: uppercase;
+}
+
+.shop-bg-blue {
+  background: #4765a0;
+}
